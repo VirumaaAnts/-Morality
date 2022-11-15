@@ -61,7 +61,7 @@ header {
 
 .links {
     width: 343px;
-    margin-left: 20vw;
+    margin-left: 23vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -143,6 +143,125 @@ header {
     z-index: 5;
     cursor: pointer;
 }
+.wrapper a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 /* -- Home page end -- */
 
 /* Topic page start */
+
+.topic {
+    display: flex;
+    background-color: #F7FFEE;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.h1_hr {
+    width: 289px;
+    margin: auto 46px;
+    border: 2px solid black;
+}
+.topic h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    display: flex;
+    margin-top: 106px;
+}
+.blocks_topic {
+    margin-top: 95px;
+}
+.first_line_topic, .second_line_topic {
+    display: flex;
+    width: 1384px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.first_line_topic div, .second_line_topic div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.first_line_topic a{
+    transform: skewX(30deg);
+    width: 326px;
+    height: 99px;
+    display: block;
+    box-shadow: -3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.first_line_topic :nth-child(1) div{
+    background: #FFC1C1;
+}
+.first_line_topic :nth-child(2) div, .first_line_topic :nth-child(2) p{
+    background: #FFD8C1;
+}
+.first_line_topic :nth-child(3) div, .first_line_topic :nth-child(3) p {
+    background: #FFEEC1;
+}
+.first_line_topic :nth-child(4) div, .first_line_topic :nth-child(4) p {
+    background: #D1FFC1;
+}
+.first_line_topic div p, .second_line_topic div p {
+    transform: skewX(-30deg);
+    font-family: 'Manjari';
+    margin: 0;
+    font-style: normal;
+    text-transform: capitalize;
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 34px;
+}
+.second_line_topic a {
+    transform: skewX(-30deg);
+    width: 326px;
+    height: 99px;
+    display: block;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.second_line_topic :nth-child(1) div{
+    background: #C1FFDE;
+}
+.second_line_topic :nth-child(2) div, .second_line_topic :nth-child(2) p{
+    background: #C1E9FF;
+}
+.second_line_topic :nth-child(3) div, .second_line_topic :nth-child(3) p {
+    background: #C1CFFF;
+}
+.second_line_topic :nth-child(4) div, .second_line_topic :nth-child(4) p {
+    background: #D9C1FF;
+}
+.second_line_topic div p {
+    transform: skewX(30deg);
+}
+.first_line_topic :nth-child(n) p, .second_line_topic :nth-child(n) p{
+    background-color: transparent;
+}
+.topic div, .topic div p {
+    transition-duration: 0.2s;
+}
+.topic div :hover{
+    background-color: transparent;
+    box-shadow: unset;
+    font-size: 36px;
+}
+.down_blocks{
+    width: 203px;
+    margin: 30px;
+    border: 1px solid black;
+}
+.text_topic_down {
+    width: 918px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 195px;
+    color: #000000;
+}
