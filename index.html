@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/app.js" defer></script>
@@ -22,9 +24,10 @@
             <li class="pages home_page"><a href="#top">Home</a></li>
             <li class="pages topic_page"><a href="#topic-page">Topic</a></li>
             <li class="pages consultation_page"><a href="#consultation-page">Consultation</a></li>
-            <li class="pages faq_page"><a href="#3">FAQ</a></li>
+            <li class="pages faq_page"><a href="#faq-page">FAQ</a></li>
         </ul>
     </header>
+
     <div class="wrapper">
         <!-- Home page -->
         <div class="home">
@@ -34,12 +37,12 @@
                 </p>
             </div>
             <img src="images/main_page.png" class="home_img">
-            <a href="#topic-page"><img src="images/arrow.png" alt="arrow" class="button_down"></a>
+            <a href="#topic-page" class="button_down"><img src="images/arrow.png" alt="arrow"></a>
         </div>
 
         <!-- Topic page -->
         <div class="topic" id="topic-page">
-            <h1><hr class="h1_hr">Choose Your Topic<hr class="h1_hr"></h1>
+            <h1>Choose Your Topic</h1>
             <div class="blocks_topic">
                 <div class="first_line_topic">
                     <a href="">
@@ -71,7 +74,9 @@
                 </div>
             </div>
             <hr class="down_blocks">
-            <p class="text_topic_down">After choosing you will be sended to our main block of web-sites where you can read about your topic and it’s solution.</p>
+            <p class="text_topic_down">After choosing you will be sended to our main block of web-sites where you can
+                read about your topic and it’s solution.</p>
+            <div class="separation_bar"></div>
         </div>
 
         <!-- Consultation page -->
@@ -91,7 +96,78 @@
                 </div>
             </div>
         </div>
+
+        <!-- FAQs page -->
+        <div class="faq" id="faq-page">
+            <div class="top_panel">
+                <h2>Frequently Asked Questions</h2>
+                <div class="search_bar">
+                    <input type="text" name="search" placeholder="Search">
+                </div>
+            </div>
+            <p>Frequently asked questions about life problems</p>
+            <div class="questions_list">
+                <div class="question">
+                    <div class="arrow_container">
+                        <img src="images/faq_arrow.png" class="dropdown_arrow" alt="">
+                    </div>
+                    <div class="question_text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit bibendum sapien?
+                        </p>
+                    </div>
+                    <div class="question_answer">
+                        <p><b>Answer:</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed hendrerit bibendum sapien, id volutpat nisl dapibus efficitur. 
+                            Aenean eget augue ornare, condimentum lorem at, gravida sapien. 
+                            Aliquam finibus, metus eget ultricies ornare, tortor ex molestie nisi
+                        </p>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="arrow_container">
+                        <img src="images/faq_arrow.png" class="dropdown_arrow" alt="">
+                    </div>
+                    <div class="question_text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit bibendum sapien?
+                        </p>
+                    </div>
+                    <div class="question_answer">
+                        <p><b>Answer:</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed hendrerit bibendum sapien, id volutpat nisl dapibus efficitur. 
+                            Aenean eget augue ornare, condimentum lorem at, gravida sapien. 
+                            Aliquam finibus, metus eget ultricies ornare, tortor ex molestie nisi
+                        </p>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="arrow_container">
+                        <img src="images/faq_arrow.png" class="dropdown_arrow" alt="">
+                    </div>
+                    <div class="question_text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit bibendum sapien?
+                        </p>
+                    </div>
+                    <div class="question_answer">
+                        <p><b>Answer:</b></p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed hendrerit bibendum sapien, id volutpat nisl dapibus efficitur. 
+                            Aenean eget augue ornare, condimentum lorem at, gravida sapien. 
+                            Aliquam finibus, metus eget ultricies ornare, tortor ex molestie nisi
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <footer>
 
     </footer>

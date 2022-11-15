@@ -5,7 +5,7 @@
 /* Montserrat font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 /* Manrope font */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 
 body {
     font-family: 'Manjari', sans-serif;
@@ -136,13 +136,12 @@ header {
 
 .button_down {
     position: absolute;
-    width: 51px;
+    width: 51px !important;
     height: 32px;
     bottom: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 5;
     cursor: pointer;
 }
 .wrapper a {
@@ -160,11 +159,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.h1_hr {
-    width: 289px;
-    margin: auto 46px;
-    border: 2px solid black;
+    position: relative;
+    padding-top: 80px;
 }
 .topic h1 {
     font-family: 'Montserrat';
@@ -172,7 +168,14 @@ header {
     font-weight: 600;
     font-size: 48px;
     display: flex;
-    margin-top: 106px;
+    align-items: center;
+}
+.topic h1::before, .topic h1::after {
+    content: '';
+    width: 289px;
+    height: 3px;
+    margin: 0 46px;
+    background-image: linear-gradient(0deg, #000 0%, #000 100%);;
 }
 .blocks_topic {
     margin-top: 95px;
@@ -251,21 +254,29 @@ header {
 }
 .down_blocks{
     width: 203px;
-    margin: 30px;
+    margin-top: 52px;
     border: 1px solid black;
 }
 .text_topic_down {
     width: 918px;
+    margin-top: 7px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 26px;
-    line-height: 32px;
+    margin-bottom: 80px;
     text-align: center;
-    margin-bottom: 195px;
     color: #000000;
 }
+.separation_bar {
+    width: 100%;
+    height: 130px;
+    background-image: linear-gradient(180deg, #F7FFEE 0%, #F5F4EC 100%);;
+    position: relative;
+    bottom: 0;
+}
 /* Topic page end */
+
 
 /* Consultation page start */
 .consultation {
@@ -273,11 +284,14 @@ header {
     background-color: #F5F5EC;
 }
 .consultation_front {
+    padding-top: 41px;
+    padding-bottom: 110px;
     width: 85%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    top: -70px;
     margin: 0 auto;
     background-color: #fff;
     filter: drop-shadow(0px 6px 21px rgba(0, 0, 0, 0.15));
@@ -292,19 +306,23 @@ header {
 .consultation_front h2::before {
     content: '';
     width: 480px;
+    height: 4px;
     display: flex;
     position: relative;
+    margin-bottom: 3px;
     left: 115px;
-    border: 2px solid #000;
+    background-image: linear-gradient(0deg, #000 0%, #000 100%);
 }
 .consultation_front h2::after {
     content: '';
     width: 480px;
+    height: 4px;
     display: flex;
     justify-content: flex-end;
     position: relative;
+    margin-top: 3px;
     right: -220px;
-    border: 2px solid #000;
+    background-image: linear-gradient(0deg, #000 0%, #000 100%);;
 }
 .consultation_front .left_side {
     width: 50%;
@@ -316,16 +334,17 @@ header {
 .consultation_front .right_side {
     width: 50%;
     position: relative;
+    top: 70px;
 }
 .consultation_front .right_side::before {
     content: '';
-    border: 1px solid #000;
+    background-image: linear-gradient(0deg, #000 0%, #000 100%);
     transform: rotate(90deg);
     position: absolute;
     left: -35%;
-    bottom: 38%;
+    bottom: 50%;
     width: 535px;
-    height: 0;
+    height: 2px;
 }
 .consultation_front .left_side form {
     width: 511px;
@@ -396,3 +415,139 @@ form .send:hover {
     /* color: #fff; */
 }
 /* Consultation page end */ 
+
+/* FAQ page start */
+.faq {
+    width: 100%;
+    padding-bottom: 50px;
+    position: relative;
+}
+.faq .top_panel {
+    width: 100%;
+    height: 220px;
+    background-color: #B4AA86;
+}
+.faq .top_panel h2 {
+    width: 100%;
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 26px 0;
+}
+.top_panel .search_bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top_panel .search_bar input {
+    width: 65%;
+    height: 60px;
+    padding-left: 28px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 5px;
+
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+.top_panel .search_bar input::placeholder {
+    font-weight: 400;
+    color: #BDBDBD;
+}
+.faq p {
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+.questions_list {
+    width: 62%;
+    border: 2px solid #77652D;
+    margin: 0 auto;
+    border-radius: 3px;
+    font-family: 'Manrope', sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.questions_list .question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #A3A3A3;
+    border-top: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: ease all .1s;
+}
+.questions_list .question:nth-last-child(1) {
+    border-bottom: none;
+}
+.questions_list .question:hover {
+    background-color: rgb(241, 241, 241);
+}
+.question .arrow_container {
+    width: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.dropdown_arrow {
+    transition: ease all .2s;
+}
+.active_question {
+    transform: rotate(90deg);
+}
+.question .question_text {
+    width: 92%;
+    overflow: hidden;
+}
+.question .question_text p {
+    text-align: left;
+    font-weight: 600;
+    font-size: 24px;
+    padding-right: 20px;
+}
+.question .question_answer {
+    width: 100%;
+    margin-top: -7px;
+    display: none;
+}
+.question .question_answer p {
+    margin: 0;
+    text-align: left;
+    padding: 0 50px;
+
+    font-weight: 400;
+    font-size: 20px;
+}
+.question .question_answer p:nth-child(1) {
+    margin-bottom: 8px;
+}
+.question .question_answer p:nth-last-child(1) {
+    padding-bottom: 15px;
+}
+.question .question_answer p b {
+    font-weight: 700;
+    font-size: 22px;
+}
+/* FAQ page end */
+
+
+/* Footer start */
+footer {
+    width: 100%;
+    height: 368px;
+    background-color: #2E2E2E;
+}
+/* Footer end */
