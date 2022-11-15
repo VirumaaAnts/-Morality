@@ -183,32 +183,28 @@ header {
     justify-content: space-between;
     margin-bottom: 15px;
 }
-.first_line_topic div, .second_line_topic div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
 .first_line_topic a{
     transform: skewX(30deg);
     width: 326px;
     height: 99px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: -3px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.first_line_topic :nth-child(1) div{
+.first_line_topic :nth-child(1){
     background: #FFC1C1;
 }
-.first_line_topic :nth-child(2) div, .first_line_topic :nth-child(2) p{
+.first_line_topic :nth-child(2){
     background: #FFD8C1;
 }
-.first_line_topic :nth-child(3) div, .first_line_topic :nth-child(3) p {
+.first_line_topic :nth-child(3){
     background: #FFEEC1;
 }
-.first_line_topic :nth-child(4) div, .first_line_topic :nth-child(4) p {
+.first_line_topic :nth-child(4){
     background: #D1FFC1;
 }
-.first_line_topic div p, .second_line_topic div p {
+.first_line_topic a p, .second_line_topic a p {
     transform: skewX(-30deg);
     font-family: 'Manjari';
     margin: 0;
@@ -222,31 +218,33 @@ header {
     transform: skewX(-30deg);
     width: 326px;
     height: 99px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.second_line_topic :nth-child(1) div{
+.second_line_topic :nth-child(1){
     background: #C1FFDE;
 }
-.second_line_topic :nth-child(2) div, .second_line_topic :nth-child(2) p{
+.second_line_topic :nth-child(2){
     background: #C1E9FF;
 }
-.second_line_topic :nth-child(3) div, .second_line_topic :nth-child(3) p {
+.second_line_topic :nth-child(3){
     background: #C1CFFF;
 }
-.second_line_topic :nth-child(4) div, .second_line_topic :nth-child(4) p {
+.second_line_topic :nth-child(4){
     background: #D9C1FF;
 }
-.second_line_topic div p {
+.second_line_topic a p {
     transform: skewX(30deg);
 }
 .first_line_topic :nth-child(n) p, .second_line_topic :nth-child(n) p{
     background-color: transparent;
 }
-.topic div, .topic div p {
+.topic a, .topic a p {
     transition-duration: 0.2s;
 }
-.topic div :hover{
+.blocks_topic :nth-child(n) :hover{
     background-color: transparent;
     box-shadow: unset;
     font-size: 36px;
