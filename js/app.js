@@ -21,10 +21,25 @@ $(document).ready(() => {
 
     // Topics dropdown
     const firstTopicColor = $(".topic").css("background-color");
+    const firstTopicColorBackground = $(".topic").css("background");
+    var lastTopicColor;
     $('.topic').children().children().children().click(function() {
-        console.log($('.topic').css("background"));
-        $('.topic').css("background", 'linear-gradient(180deg, ' + firstTopicColor + ' 0%' + ', ' + $(this).css("background-color") + ' 100px, ' + $(this).css("background-color") + ' 70%, #F5F5EC 100%');
-        $('.separation_bar').css('background-image', 'linear-gradient(180deg,' + $('.topic').css("background-color") + '0%, #F5F5EC 100%)');
+        if(lastTopicColor !== undefined){
+            $('.topic').css("background", 'linear-gradient(180deg, ' + firstTopicColor + ' 0%' + ', ' + $(this).css("background-color") + ' 100px, ' + $(this).css("background-color") + ' 70%, #F5F5EC 100%');
+            if($('.topic').css("background") === lastTopicColor){
+                $('.topic').css("background", firstTopicColorBackground);
+                $('.separation_bar').css('background-image', "linear-gradient(180deg, #F7FFEE 0%, #F5F4EC 100%)");
+                lastTopicColor = $('.topic').css("background");
+            }else{
+                $('.topic').css("background", 'linear-gradient(180deg, ' + firstTopicColor + ' 0%' + ', ' + $(this).css("background-color") + ' 100px, ' + $(this).css("background-color") + ' 70%, #F5F5EC 100%');
+                lastTopicColor = $('.topic').css("background");
+                $('.separation_bar').css('background-image', 'linear-gradient(180deg,' + $('.topic').css("background-color") + '0%, #F5F5EC 100%)');
+            }
+        }else{
+            $('.topic').css("background", 'linear-gradient(180deg, ' + firstTopicColor + ' 0%' + ', ' + $(this).css("background-color") + ' 100px, ' + $(this).css("background-color") + ' 70%, #F5F5EC 100%');
+            lastTopicColor = $('.topic').css("background");
+            $('.separation_bar').css('background-image', 'linear-gradient(180deg,' + $('.topic').css("background-color") + '0%, #F5F5EC 100%)');
+        }
     });
     // -----------------------------------
     

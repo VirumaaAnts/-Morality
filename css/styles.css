@@ -170,9 +170,6 @@ header {
     position: relative;
     padding-top: 80px;
 }
-.topic::before{
-
-}
 .topic h1 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -196,6 +193,12 @@ header {
 }
 .blocks_topic div {
     cursor: pointer;
+}
+.blocks_topic div p {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 .first_line_topic,
 .second_line_topic {
