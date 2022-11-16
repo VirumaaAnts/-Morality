@@ -170,7 +170,9 @@ header {
     position: relative;
     padding-top: 80px;
 }
+.topic::before{
 
+}
 .topic h1 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -192,7 +194,9 @@ header {
 .blocks_topic {
     margin-top: 35px;
 }
-
+.blocks_topic div {
+    cursor: pointer;
+}
 .first_line_topic,
 .second_line_topic {
     display: flex;
@@ -201,7 +205,7 @@ header {
     margin-bottom: 15px;
 }
 
-.first_line_topic a {
+.first_line_topic div {
     transform: skewX(30deg);
     width: 326px;
     height: 99px;
@@ -227,8 +231,8 @@ header {
     background: #D1FFC1;
 }
 
-.first_line_topic a p,
-.second_line_topic a p {
+.first_line_topic div p,
+.second_line_topic div p {
     transform: skewX(-30deg);
     font-family: 'Manjari', sans-serif;
     margin: 0;
@@ -238,7 +242,7 @@ header {
     font-size: 28px;
 }
 
-.second_line_topic a {
+.second_line_topic div {
     transform: skewX(-30deg);
     width: 326px;
     height: 99px;
@@ -264,7 +268,7 @@ header {
     background: #D9C1FF;
 }
 
-.second_line_topic a p {
+.second_line_topic div p {
     transform: skewX(30deg);
 }
 
@@ -273,13 +277,13 @@ header {
     background-color: transparent;
 }
 
-.topic a,
-.topic a p {
+.topic div,
+.topic div p {
     transition-duration: 0.2s;
 }
 
-.first_line_topic a:hover,
-.second_line_topic a:hover{
+.first_line_topic div:hover,
+.second_line_topic div:hover{
     filter: brightness(0.9) saturate(200%);
     width: calc(47.5% + 5px);
 }

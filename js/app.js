@@ -18,6 +18,15 @@ $(document).ready(() => {
         }
     }
     // -----------------------------------
+
+    // Topics dropdown
+    const firstTopicColor = $(".topic").css("background-color");
+    $('.topic').children().children().children().click(function() {
+        console.log($('.topic').css("background"));
+        $('.topic').css("background", 'linear-gradient(180deg, ' + firstTopicColor + ' 0%' + ', ' + $(this).css("background-color") + ' 100px, ' + $(this).css("background-color") + ' 70%, #F5F5EC 100%');
+        $('.separation_bar').css('background-image', 'linear-gradient(180deg,' + $('.topic').css("background-color") + '0%, #F5F5EC 100%)');
+    });
+    // -----------------------------------
     
     // FAQs dropdown
     $('.question').click(function() {
