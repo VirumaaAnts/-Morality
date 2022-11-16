@@ -285,7 +285,7 @@ header {
 .first_line_topic a:hover,
 .second_line_topic a:hover{
     filter: brightness(0.9) saturate(200%);
-    width: calc(65% + 5px);
+    width: calc(47.5% + 5px);
 }
 
 .first_line_topic a:hover > p,
@@ -698,10 +698,22 @@ footer li a{
     line-height: 149.5%;
     margin-left: 15px;
 }
+.footer_top_right_part .geo_text_footer {
+    font-family: 'Manjari', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: -5px;
+    margin-left: 15px;
+    color: #ACACAC;
+}
 .menu {
     margin-right: 72px;
 }
 .contacts {
+    margin-right: 72px;
+}
+.place {
     margin-right: 98px;
 }
 .line_footer {
