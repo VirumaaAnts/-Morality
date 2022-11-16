@@ -28,13 +28,8 @@ ul {
     padding-left: 0;
 }
 
-/* ::-webkit-scrollbar {
-    display: none;
-} */
-
 .wrapper {
     width: 100%;
-    height: 100vh;
 }
 
 /* Header start */

@@ -1,0 +1,49 @@
+#assistant {
+    display: none;
+    opacity: 0;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 50%;
+    animation: assistant_animation infinite 5s;
+    transition: ease all;
+}
+
+#assistant img {
+    object-fit: contain;
+}   
+
+@keyframes assistant_animation {
+    0% {
+        bottom: 40px;
+        box-shadow: 0 0 4px 0 #00A811;
+    }
+    35% {
+        bottom: 40px;
+        box-shadow: 0 0 4px 0 #00A811;
+    }
+    50% {
+        bottom: 60px;
+        box-shadow: 0 0 17px 0 #00A811;
+    }
+    65% {
+        bottom: 40px;
+        box-shadow: 0 0 4px 0 #00A811;
+    }
+    100% {
+        bottom: 40px;
+        box-shadow: 0 0 4px 0 #00A811;
+    }
+}
+
+.assistant_chat {
+    width: 405px;
+    height: 535px;
+    position: fixed;
+    bottom: 0;
+    right: 170px;
+}
