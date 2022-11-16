@@ -1,5 +1,15 @@
 const chatBody = document.querySelector('.chat_field');
 const input = document.querySelector('#message');
+const chat = document.querySelector('.assistant_chat');
+const assistantBtn = document.querySelector('#assistant');
+const closeChat = document.querySelector('#closeChat');
+
+assistantBtn.addEventListener('click', function() {
+    chat.style.display = 'unset';
+});
+closeChat.addEventListener('click', function() {
+    chat.style.display = 'none';
+});
 
 const getUserMessage = () => {
     const userInput = input.value;
