@@ -28,4 +28,14 @@ $(document).ready(() => {
         $('.question_answer').not($(this).find('.question_answer')).slideUp(150);
     });
     // -----------------------------------
+
+    // Assistant appearance
+    setTimeout(() => {
+        setTimeout(() => {
+            
+        }, );
+        $('#assistant').show();
+        $('#assistant').animate({'opacity': 1}, 300);
+    }, 2000);
+    // -----------------------------------
 });
