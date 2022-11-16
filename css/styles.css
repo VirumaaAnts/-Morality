@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 /* Manrope font */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet');
 
 html {
     scroll-behavior: smooth;
@@ -624,7 +625,6 @@ form .send:hover {
 
 /* Footer start */
 footer {
-    width: 100%;
     background-color: #3E3D33;
     padding-top: 44px;
     padding-left: 78px;
@@ -632,6 +632,7 @@ footer {
 }
 .footer_top_part {
     display: flex;
+    justify-content: space-between;
 }
 .footer_top_left_part p{
     color: #ACACAC;
@@ -643,7 +644,6 @@ footer {
     
 }
 .footer_top_left_part {
-    background-color: ;
     display: flex;
     justify-content: start;
     align-items: flex-start;
@@ -668,9 +668,49 @@ footer {
 .footer_top_right_part {
     display: flex;
 }
+.footer_top_right_part p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: left;
+    color: white;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+.menu, .contacts {
+    color: #ACACAC;
+
+}
+footer li {
+    line-height: 149.5%;
+    margin-left: 15px;
+}
+.menu {
+    margin-right: 72px;
+}
+.contacts {
+    margin-right: 98px;
+}
 footer hr {
     border: 1px solid #BABABA;
     margin: auto;
+    margin-top: 100px;
 }
-
+.footer_bottom_part {
+    display: flex;
+    justify-content: flex-end;
+}
+.footer_bottom_part p {
+    margin-right: 38px;
+    color: white;
+}
+.footer_bottom_part a {
+    margin-right: 38px;
+    color: white;
+}
+.footer_bottom_part a p{
+    margin-right: 0px;
+}
 /* Footer end */
