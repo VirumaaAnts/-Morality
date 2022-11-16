@@ -56,5 +56,4 @@ function renderBotAnswer(botAnswer) {
         input.value = '';
         chatBody.scrollTop = chatBody.scrollHeight;
     }, 1000);
-    
 }
