@@ -30,12 +30,30 @@ $(document).ready(() => {
     // -----------------------------------
 
     // Assistant appearance
+    $('#assistant').css({'display': 'block', 'animation': 'assistant_animation infinite 5s'});
     setTimeout(() => {
-        setTimeout(() => {
+        $('#assistant').animate({'opacity': 1, 'bottom': '40px'}, 500, 'linear');
+        $('#assistant').css('cursor', 'pointer');
+
+        $('#assistant').click(() => {
             
-        }, );
-        $('#assistant').show();
-        $('#assistant').animate({'opacity': 1}, 300);
+            if($('.assistant_chat').css('display') == 'none') {
+                // Open chat
+                $('.assistant_chat').show();
+                $('.assistant_chat').animate({'opacity': 1}, 400);
+
+                $('#assistant').animate({'bottom': '40px'}, 250, 'linear');
+                const assist_styles = $('#assistant').prop('style');
+                assist_styles.removeProperty('animation');
+            } else {
+                // Close chat
+                $('.assistant_chat').fadeOut();
+                setTimeout(() => {
+                    $('.assistant_chat').css('opacity', 0);
+                }, 400);
+                $('#assistant').css('animation', 'assistant_animation infinite 5s');
+            }
+        });
     }, 2000);
     // -----------------------------------
 });

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/chat.css">
     <script src="js/app.js" defer></script>
     <script src="js/chatBot.js" defer></script>
+    <script type="module" src="js/response.js"></script>
     <title>+Morality</title>
 </head>
 
@@ -38,24 +39,22 @@
         <!-- Assistant chat -->
         <div class="assistant_chat">
             <div class="top_panel">
-                <div class="left_side">
+                <div>
                     <p>Send us a message</p>
                     <p class="status">We are online</p>
                 </div>
-                <div class="right_side">
-                    <img src="images/chat_cross.png" id="closeChat" alt="close">
-                </div>
             </div>
-            <div class="chat_field"></div>
+            <div class="chat_field">
+                <div class="user_message">Hello robot!</div>
+                <div class="bot_message">I'm just robot eblivii!</div>
+            </div>
             <span id="botStatus" class="whistBot">
                 <span class="typing_alert">Assistant is typing</span>
                 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             </span>
             <div class="bottom_panel">
                 <div class="input_field">
-                    <form id="myForm">
-                        <input type="text" id="message" placeholder="Type..." name="msg" autocomplete="off" autofocus>
-                    </form>
+                    <input type="text" id="message" placeholder="Type..." name="msg" autocomplete="off" autofocus>
                 </div>
                 <div class="send">
                     <img src="images/chat_send.png" alt="send">

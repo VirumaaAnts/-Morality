@@ -1,0 +1,10 @@
+[
+    {
+        "message": "Hello",
+        "answer": "Good day!"
+    },
+    {
+        "message": "Help",
+        "answer": "Choose your problem category: \nDepression\nRelations\nDependencies\nFears\nViolence\nFamily\nSelf-Rating\nSleeping"
+    }
+]

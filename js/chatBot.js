@@ -1,18 +1,17 @@
-const chatBody = document.querySelector('.chat_field');
-const input = document.querySelector('#message');
-const chat = document.querySelector('.assistant_chat');
-const assistantBtn = document.querySelector('#assistant');
-const closeChat = document.querySelector('#closeChat');
+var json = [];
+var answers = [];
+const getJsonData = () => {
+    answers = json;
+}
 
-assistantBtn.addEventListener('click', function() {
-    chat.style.display = 'unset';
-});
-closeChat.addEventListener('click', function() {
-    chat.style.display = 'none';
+$('#message').keydown(function(e) {
+    if(e.key === 'Enter') {
+        getUserMessage();
+    }
 });
 
 const getUserMessage = () => {
-    const userInput = input.value;
+    const userInput = $('#message').val();
     if(userInput.trim() != '') {
         renderUserMessage(userInput);
     }
@@ -24,36 +23,32 @@ const renderUserMessage = (message) => {
     const userNode = document.createTextNode(message);
     userMessageElem.classList.add('user_message');
     userMessageElem.append(userNode);
-    chatBody.append(userMessageElem);
+    $('.chat_field').append(userMessageElem);
 };
 
 // Rendering bot answer
 function renderBotAnswer(botAnswer) {  
     $('#botStatus').removeClass('whistBot');
     $('#botStatus').addClass('botTyping');
-    $('.chat_body').css('height', '272px');
-    // while ($('#botStatus').hasClass('botTyping')) {
-    //     $('#input').keypress(function(e) {
-    //         return false;
-    //     });
-    // }
+    $('.chat_field').css('height', '272px');
+
     setTimeout(() => {
         $('#botStatus').removeClass('botTyping');
         $('#botStatus').addClass('whistBot');
-        $('.chat_body').css('height', '300px');
+        $('.chat_field').css('height', '300px');
         let botNode = '';
         const botMessageElem = document.createElement('div');
         if(botAnswer != null && botAnswer != '') {
             botNode = document.createTextNode(botAnswer);
         } 
         else {
-            botNode = document.createTextNode("I'm just robot eblivii!");
+            botNode = document.createTextNode("I'm just robot, genius...");
         }
-        botMessageElem.classList.add('chatbot_message');
+        botMessageElem.classList.add('bot_message');
         botMessageElem.append(botNode);
-        chatBody.append(botMessageElem);
+        $('.chat_field').append(botMessageElem);
 
-        input.value = '';
-        chatBody.scrollTop = chatBody.scrollHeight;
+        $('#message').value = '';
+        $('.chat_field').scrollTop() = document.querySelector('.chat_field').scrollHeight;
     }, 1000);
 }
