@@ -22,10 +22,10 @@ $(document).ready(() => {
     // FAQs dropdown
     $('.question').click(function() {
         $(this).find('.arrow_container').children().toggleClass('active_question');
-        $(this).find('.question_answer').slideToggle('250', 'linear');
+        $(this).find('.question_answer').slideToggle(250);
 
         $('.dropdown_arrow').not($(this).find('.arrow_container').children()).removeClass('active_question');
-        $('.question_answer').not($(this).find('.question_answer')).slideUp('150', 'linear');
+        $('.question_answer').not($(this).find('.question_answer')).slideUp(150);
     });
     // -----------------------------------
 });
