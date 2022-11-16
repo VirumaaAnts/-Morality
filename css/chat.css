@@ -45,5 +45,29 @@
     height: 535px;
     position: fixed;
     bottom: 0;
-    right: 170px;
+    right: 130px;
+    z-index: 10;
+
+    background-color: #FFFBFB;
+    border: 1px solid rgba(23, 72, 0, 0.5);
+    border-radius: 5px 50px 5px 5px;
+    overflow: hidden;
+}
+
+.assistant_chat .top_panel {
+    background-image: url('../images/chat_bg.png');
+    position: relative;
+    top: 0;
+}
+
+.assistant_chat .chat_field {
+    height: 336px;
+}
+
+.whistBot {
+    display: none;    
+}
+
+.botTyping {
+    display: unset;
 }
