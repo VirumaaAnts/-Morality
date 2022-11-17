@@ -62,7 +62,7 @@ header {
 .logo_name {
     font-family: 'Paprika';
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5em;
     text-transform: capitalize;
     color: #000;
     text-shadow: 2px 3px 9px rgba(0, 0, 0, 0.25);
@@ -81,7 +81,7 @@ header {
     list-style: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1em;
     color: #3E3E3E;
     cursor: pointer;
 }
@@ -116,7 +116,7 @@ header {
 
 .light_green .text {
     font-weight: 700;
-    font-size: 60px;
+    font-size: 3.75em;
     margin: 30px;
 }
 
@@ -125,7 +125,6 @@ header {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-
     background-color: #fff;
     background-image: url("../images/dark-green_line.png");
     background-size: cover;
@@ -146,7 +145,7 @@ header {
     height: 453px;
     object-fit: cover;
     position: absolute;
-    right: 8vw;
+    right: 7vw;
     top: 22vh;
 }
 
@@ -173,6 +172,7 @@ header {
 .topic h1 {
     font-family: 'Montserrat';
     font-weight: 600;
+    width: max-content;
     font-size: 48px;
     text-align: center;
     display: flex;
@@ -183,7 +183,7 @@ header {
 .topic h1::before,
 .topic h1::after {
     content: '';
-    width: 289px;
+    width: 16vw;
     height: 3px;
     margin: 0 46px;
     background-image: linear-gradient(0deg, #000 0%, #000 100%);
@@ -225,14 +225,14 @@ header {
 .top_row,
 .bottom_row {
     display: flex;
-    width: 1384px;
+    width: 77vw;
     justify-content: space-between;
     margin-bottom: 15px;
 }
 
 .blocks_topic .top_row div {
     transform: skewX(30deg);
-    width: 326px;
+    width: 336px;
     height: 99px;
     display: flex;
     justify-content: center;
@@ -247,7 +247,7 @@ header {
 
 .blocks_topic .bottom_row div {
     transform: skewX(-30deg);
-    width: 326px;
+    width: 336px;
     height: 99px;
     display: flex;
     justify-content: center;
@@ -415,24 +415,24 @@ header {
 }
 
 .consultation_front .right_side {
+    display: flex;
+    justify-content: center;
     width: 50%;
     position: relative;
     top: 70px;
 }
-
-.consultation_front .right_side::before {
-    content: '';
-    background-image: linear-gradient(0deg, #000 0%, #000 100%);
-    transform: rotate(90deg);
-    position: absolute;
-    left: -35%;
-    bottom: 50%;
-    width: 605px;
-    height: 2px;
+.consultation_front .right_side img {
+    width: 85%;
 }
-
+.line_form {
+    height: 605px;
+    width: 2px;
+    margin-top: 150px;
+    border-radius: 1px;
+    background-color: black;
+}
 .consultation_front .left_side form {
-    width: 511px;
+    width: 70%;
     margin-top: 42px;
     display: flex;
     flex-wrap: wrap;
@@ -440,7 +440,8 @@ header {
     justify-content: center;
 }
 .left_side p {
-    width: 511px;
+    width: 100%;
+    margin: auto 16%;
     text-align: justify;
     color: #797979;
     margin-top: 30px;
@@ -702,6 +703,7 @@ footer {
     font-family: 'Manrope';
     font-weight: 400;
     font-size: 20px;
+    margin-right: 150px;
 }
 
 .footer_left {
@@ -807,3 +809,87 @@ footer a {
 }
 
 /* Footer end */
+
+
+@media (max-width:1800px) {
+    .logo {
+        margin-left: 26vw;
+    }
+    .links {
+        margin-left: 22vw;
+    }
+    .home_img {
+        width: 45.5vw;
+        height: 453px;
+        object-fit: cover;
+        position: absolute;
+        right: 7vw;
+        top: 22vh;
+    }
+    .topic_container {
+        width: 100%;
+    }
+    .top_row, .bottom_row {
+        justify-content: space-between;
+    }
+    .blocks_topic .top_row div, .blocks_topic .bottom_row div {
+        width: 24.1%;
+    }
+}
+@media (max-width:1700px) {
+    .logo {
+        margin-left: 26.5vw;
+    }
+    .links {
+        margin-left: 20.5vw;
+    }
+    .consultation_front {
+        justify-content: space-evenly;
+    }
+}
+@media (max-width:1600px) {
+    .logo {
+        margin-left: 27vw;
+    }
+    .links {
+        margin-left: 18vw;
+    }
+}
+@media (max-width:1500px) {
+    .logo {
+        margin-left: 28vw;
+    }
+    .links {
+        margin-left: 16vw;
+    }
+}
+@media (max-width:1400px) {
+}
+@media (max-width:1300px) {
+}
+@media (max-width:1200px) {
+    .footer_left p {
+        width: 250px;
+        margin-right: 0px;
+    }
+}
+@media (max-width:1100px) {
+}
+@media (max-width:1000px) {
+}
+@media (max-width:900px) {
+}
+@media (max-width:800px) {
+}
+@media (max-width:700px) {
+}
+@media (max-width:600px) {
+}
+@media (max-width:500px) {
+}
+@media (max-width:400px) {
+}
+@media (max-width:300px) {
+}
+@media (max-width:200px) {
+}
