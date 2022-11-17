@@ -75,6 +75,7 @@ function initChat() {
             setTimeout(() => {
                 if(botAnswer == 'bye ty'){
                     $('.assistant_chat').fadeOut();
+                    $('.chat_field').html('');
                 }
             }, 300);
             document.querySelector('.chat_field').scrollTop = document.querySelector('.chat_field').scrollHeight;
