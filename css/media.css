@@ -41,6 +41,12 @@
     .links {
         margin-left: 18vw;
     }
+    .consultation_front .left_side form, .left_side p {
+        width: 75%;
+    }
+    .consultation_front .right_side img {
+        width: 90%;
+    }
 }
 @media (max-width:1500px) {
     .logo {
@@ -49,10 +55,38 @@
     .links {
         margin-left: 16vw;
     }
+    .consultation_front .left_side form, .left_side p {
+        width: 80%;
+    }
+    .consultation_front .right_side img {
+        width: 95%;
+    }
+   
+    .h2_black_line_up{
+        width: 400px;
+    }
+    .h2_black_line_down{
+        width: 400px;
+    }
+    .consultation_front h2 {
+        font-size: 40px;
+    }
 }
 @media (max-width:1400px) {
+    .consultation_front .left_side form, .left_side p {
+        width: 85%;
+    }
+    .consultation_front .right_side img {
+        width: 100%;
+    }
 }
 @media (max-width:1300px) {
+    .h2_black_line_up{
+        width: 350px;
+    }
+    .h2_black_line_down{
+        width: 350px;
+    }
 }
 @media (max-width:1250px) {
     .line_footer {
@@ -60,6 +94,9 @@
     }
 }
 @media (max-width:1200px) {
+    .consultation_front .left_side {
+        width: 60%;
+    }
     .footer_left p {
         width: 250px;
         margin-right: 100px;
@@ -78,6 +115,9 @@
     }
 }
 @media (max-width:1100px) {
+    .consultation_front .left_side {
+        width: 72%;
+    }
     .footer_left p {
         margin-right: 0px;
     }
@@ -97,11 +137,40 @@
         margin-right: 15px;
     }
 }
-@media (max-width:1000px) {
+@media (max-width:1000px) and (min-width:951px){
+    .h2_black_line_up{
+        width: 320px;
+    }
+    .h2_black_line_down{
+        width: 320px;
+    }
+    form .send span::before,
+    form .send span::after {
+        content: "";
+        display: block;
+        width: 25%;
+        height: 2px;
+        margin: 0 21px;
+        background-color: #000;
+    }
+}
+@media (max-width:950px) {
+    .consultation_front .line_form {
+        display: none;
+    }
+    .consultation_front .right_side {
+        display: none;
+    }
 }
 @media (max-width:900px) {
+    .consultation_front .left_side {
+        width: 80%;
+    }
 }
 @media (max-width:800px) {
+    .consultation_front .left_side {
+        width: 90%;
+    }
 }
 @media (max-width:770px) {
     .footer_right .place {
@@ -114,8 +183,30 @@
     }
 }
 @media (max-width:700px) {
+    .consultation_front .left_side {
+        width: 95%;
+    }
+    form .send span::before,
+    form .send span::after {
+        width: 24%;
+    }
 }
 @media (max-width:600px) {
+    .consultation_front h2 {
+        width: 90%;
+        text-align: center;
+    }
+    .h2_black_line_up{
+        width: 320px;
+        margin-left: 10px;
+    }
+    .h2_black_line_down{
+        width: 320px;
+        margin-right: 10px;
+    }
+    .consultation_front .left_side {
+        width: 95%;
+    }
 }
 @media (max-width:550px) {
     .footer_right .contacts {
@@ -140,6 +231,12 @@
     }
 }
 @media (max-width:500px) {
+    form .send span::before,
+    form .send span::after {
+        width: 15%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 @media (max-width:400px) {
 }
