@@ -1,60 +1,79 @@
-const chatBody = document.querySelector('.chat_field');
-const input = document.querySelector('#message');
-const chat = document.querySelector('.assistant_chat');
-const assistantBtn = document.querySelector('#assistant');
-const closeChat = document.querySelector('#closeChat');
+var json = [];
+var answers = [];
+const getJsonData = () => {
+    answers = json;
+}
 
-assistantBtn.addEventListener('click', function() {
-    chat.style.display = 'unset';
+
+$('#message').keydown(function(e) {
+    if($('#botStatus').hasClass('botTyping')) {
+        $('#message').val('');
+        $('#message').attr('disabled', 'disabled');
+        return;
+    }
+    if(e.key === 'Enter') {
+        getUserMessage();
+    }
 });
-closeChat.addEventListener('click', function() {
-    chat.style.display = 'none';
+$('#sendMessage').click(() => {
+    getUserMessage();
 });
 
 const getUserMessage = () => {
-    const userInput = input.value;
+    const userInput = $('#message').val();
     if(userInput.trim() != '') {
         renderUserMessage(userInput);
     }
 };
 
-// Rendering user message
 const renderUserMessage = (message) => {
+    // Rendering user message
     const userMessageElem = document.createElement('div');
     const userNode = document.createTextNode(message);
     userMessageElem.classList.add('user_message');
     userMessageElem.append(userNode);
-    chatBody.append(userMessageElem);
+    $('.chat_field').append(userMessageElem);
+
+    // Get answer from db
+    const answer = answers.find(ans => ans.message == message);
+    if(answer != null) {
+        renderBotAnswer(answer.answer);
+    } else {
+        renderBotAnswer(null);
+    }
 };
 
 // Rendering bot answer
 function renderBotAnswer(botAnswer) {  
     $('#botStatus').removeClass('whistBot');
     $('#botStatus').addClass('botTyping');
-    $('.chat_body').css('height', '272px');
-    // while ($('#botStatus').hasClass('botTyping')) {
-    //     $('#input').keypress(function(e) {
-    //         return false;
-    //     });
-    // }
+    $('.chat_field').css('height', '316px');
+    $('#message').val('');
+
     setTimeout(() => {
+        renderAnswer();
+    }, 1000);
+    function renderAnswer() {
         $('#botStatus').removeClass('botTyping');
         $('#botStatus').addClass('whistBot');
-        $('.chat_body').css('height', '300px');
+        $('.chat_field').css('height', '336px');
+        $('#message').removeAttr('disabled');
+        $('#message').focus();
+
         let botNode = '';
         const botMessageElem = document.createElement('div');
         if(botAnswer != null && botAnswer != '') {
             botNode = document.createTextNode(botAnswer);
         } 
         else {
-            botNode = document.createTextNode("I'm just robot eblivii!");
+            botNode = document.createTextNode("I'm just robot, genius...");
         }
-        botMessageElem.classList.add('chatbot_message');
+        botMessageElem.classList.add('bot_message');
+        botMessageElem.style = 'white-space: pre';
         botMessageElem.append(botNode);
-        chatBody.append(botMessageElem);
+        $('.chat_field').append(botMessageElem);
 
-        input.value = '';
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }, 1000);
-    
+        document.querySelector('.chat_field').scrollTop = document.querySelector('.chat_field').scrollHeight;
+    }
+
 }

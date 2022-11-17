@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/chat.css">
     <script src="js/app.js" defer></script>
     <script src="js/chatBot.js" defer></script>
+    <script type="module" src="js/response.js"></script>
     <title>+Morality</title>
 </head>
 
@@ -38,27 +39,25 @@
         <!-- Assistant chat -->
         <div class="assistant_chat">
             <div class="top_panel">
-                <div class="left_side">
+                <div>
                     <p>Send us a message</p>
                     <p class="status">We are online</p>
                 </div>
-                <div class="right_side">
-                    <img src="images/chat_cross.png" id="closeChat" alt="close">
-                </div>
             </div>
-            <div class="chat_field"></div>
+            <div class="chat_field">
+                <!-- <div class="user_message">Hello robot!</div>
+                <div class="bot_message">I'm just robot!</div> -->
+            </div>
             <span id="botStatus" class="whistBot">
                 <span class="typing_alert">Assistant is typing</span>
                 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             </span>
             <div class="bottom_panel">
                 <div class="input_field">
-                    <form id="myForm">
-                        <input type="text" id="message" placeholder="Type..." name="msg" autocomplete="off" autofocus>
-                    </form>
+                    <input type="text" id="message" placeholder="Type..." name="msg" autocomplete="off" autofocus>
                 </div>
                 <div class="send">
-                    <img src="images/chat_send.png" alt="send">
+                    <img src="images/chat_send.png" alt="send" id="sendMessage">
                 </div>
             </div>
         </div>
@@ -78,8 +77,8 @@
         <div class="topic" id="topic-page">
             <h1>Choose Your Topic</h1>
             <div class="blocks_topic">
-                <div class="first_line_topic">
-                    <div>
+                <div class="top_row">
+                    <a href="">
                         <p>Depression</p>
                     </div>
                     <div>
@@ -92,8 +91,8 @@
                         <p>Fears</p>
                     </div>
                 </div>
-                <div class="second_line_topic">
-                    <div>
+                <div class="bottom_row">
+                    <a href="">
                         <p>Violence</p>
                     </div>
                     <div>
@@ -107,8 +106,10 @@
                     </div>
                 </div>
             </div>
-            <p class="text_topic_down">After choosing you will be sended to our main block of web-sites where you can
-                read about your topic and it’s solution.</p>
+            <p class="topic_description">
+                After choosing you will be sended to our main block of web-sites where you can
+                read about your topic and it’s solution.
+            </p>
             <div class="separation_bar"></div>
         </div>
 
@@ -200,31 +201,31 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="footer_top_part">
-            <div class="footer_top_left_part">
+    <footer id="footer">
+        <div class="footer_top">
+            <div class="footer_left">
                 <a class="logo_footer" href="#top">
                     <img src="images/logo.png" alt="logo">
                     <span class="logo_name">+Morality</span>
                 </a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed<br>hendrerit bibendum sapien. Aenean eget augue ornare,<br>condimentum lorem at, gravida sapien.</p>
                 <div>
-                    <a href=""><img src="images/facebook.svg" alt=""></a>
-                    <a href=""><img src="images/twitter.svg" alt=""></a>
-                    <a href=""><img src="images/instagram.svg" alt=""></a>
-                    <a href=""><img src="images/linkedIn.svg" alt=""></a>
-                    <a href=""><img src="images/gitHub.svg" alt=""></a>
-                    <a href=""><img src="images/YouTube.svg" alt=""></a>
+                    <a href=""><img src="images/facebook.svg" alt="facebook"></a>
+                    <a href=""><img src="images/twitter.svg" alt="twitter"></a>
+                    <a href=""><img src="images/instagram.svg" alt="instagram"></a>
+                    <a href=""><img src="images/linkedin.svg" alt="linkedIn"></a>
+                    <a href=""><img src="images/github.svg" alt="gitHub"></a>
+                    <a href=""><img src="images/youtube.svg" alt="YouTube"></a>
                 </div>
             </div>
-            <div class="footer_top_right_part">
+            <div class="footer_right">
                 <div class="menu">
                     <p>Menu</p>
                     <ul type="none">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Topics</a></li>
-                        <li><a href="">Consultation</a></li>
-                        <li><a href="">FAQ</a></li>
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#topic-page">Topics</a></li>
+                        <li><a href="#consultation-page">Consultation</a></li>
+                        <li><a href="#faq-page">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="contacts">
@@ -236,20 +237,21 @@
                         <li><a href="">Join Us</a></li>
                     </ul>
                 </div>
-                <div class="contacts">
+                <div class="place">
                     <p>Geolocation</p>
-                        <p class="geo_text_footer">Street: 1315 Polk Street <br>
-                            City: Tucson <br>
-                            State Full: Arizona <br>
-                            Zipcode: 85701 <br>
-                            Telephone Number: 520-786-0245 <br>
-                            Mobile Number: 520-279-7678
-                        </p>
+                    <ul type="none">
+                        <li>Street: 1315 Polk Street</li>
+                        <li>City: Tucson</li>
+                        <li>State Full: Arizona</li>
+                        <li>Zipcode: 85701</li>
+                        <li>Telephone Number: 520-786-0245</li>
+                        <li>Mobile Number: 520-279-7678</li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="line_footer"></div>
-        <div class="footer_bottom_part">
+        <div class="footer_bottom">
             <p>© 2022 +Morality. All rights reserved.</p>
             <p><a href="">Privacy Policy</a></p>
             <p><a href="">Cookie Policy</a></p>
