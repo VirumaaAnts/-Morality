@@ -57,10 +57,25 @@
 @media (max-width:1200px) {
     .footer_left p {
         width: 250px;
+        margin-right: 100px;
+    }
+    .footer_top {
+        justify-content: space-between;
+    }
+    .footer_right {
+        width: 75%;
+        justify-content: space-between;
+    }
+    .menu,
+    .contacts,
+    .place {
         margin-right: 0px;
     }
 }
 @media (max-width:1100px) {
+    .footer_left p {
+        margin-right: 0px;
+    }
 }
 @media (max-width:1000px) {
 }
