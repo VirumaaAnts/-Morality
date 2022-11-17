@@ -588,11 +588,32 @@ form .send:hover {
     margin: 0;
     text-align: left;
     padding: 0 50px;
-
     font-weight: 400;
     font-size: 20px;
 }
-
+.question .question_answer ul {
+    margin: 0;
+    text-align: left;
+    padding: 0 50px;
+    font-weight: 400;
+    font-size: 20px;
+    list-style: none;
+}
+.question .question_answer ul li::before{
+    content: "";
+    display: inline-block;
+    color: white;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #8f8e5f;
+    border-radius: 10px 25px 10px 25px / 25px 10px 25px 10px;
+    margin-left: -18px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+.question .question_answer ul li{
+    margin: 20px auto;
+}
 .question .question_answer p:nth-child(1) {
     margin-bottom: 8px;
 }

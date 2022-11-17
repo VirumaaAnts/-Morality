@@ -87,15 +87,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
-    overflow-x: hidden;
+    /* justify-content: flex-end; */
     overflow-y: auto;
+    word-break: break-all;
 }
 .chat_field .user_message {
     background-color: #42d461;
     color: #fff;
 }
-
 .chat_field .user_message,
 .chat_field .bot_message {
     border: 0.5px solid #848484af;
@@ -155,7 +154,9 @@
 }
 #botStatus {
     height: 20px;
-    margin-left: 5px;
+    position: absolute;
+    bottom: 95px;
+    left: 10px;
 }
 .whistBot {
     display: none;    
