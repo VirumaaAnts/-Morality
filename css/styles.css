@@ -722,13 +722,13 @@ footer {
 .footer_left div a {
     width: 25px;
     height: 25px;
+    background: transparent;
 }
 
 .footer_left div a img {
     width: 100%;
     object-fit: contain;
 }
-
 .logo_footer {
     display: flex;
     align-items: center;
