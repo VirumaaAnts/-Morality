@@ -3,7 +3,7 @@
 /* Paprika font */
 @import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
 /* Montserrat font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 /* Manrope font */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 /* Inter font */
@@ -168,7 +168,7 @@ header {
 .topic {
     background-color: #F7FFEE;
     position: relative;
-    padding-top: 80px;
+    padding-top: 90px;
 }
 .topic h1 {
     font-family: 'Montserrat';
@@ -177,6 +177,7 @@ header {
     text-align: center;
     display: flex;
     align-items: center;
+    margin-top: 70px;
 }
 
 .topic h1::before,
@@ -190,9 +191,7 @@ header {
 .topic .topic_container {
     width: 85%;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, .5);
     /* background-color: rgba(255, 255, 255, 0.7); */
-    box-shadow: 0px 1px 11px 2px rgba(0, 0, 0, 0.1);
     /* box-shadow: 0px 1px 11px 2px rgba(0, 0, 0, 0.25); */
     border-radius: 5px;
     transition: ease all 1s;
@@ -284,19 +283,19 @@ header {
     letter-spacing: 1px;
 }
 
-.topic_description {
-    width: 918px;
+.topic_solution {
+    width: 950px;
     margin-top: 7px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 26px;
-    margin-bottom: 115px;
+    margin-bottom: 45px;
     text-align: center;
-    color: #000000;
+    color: #000;
 }
 
-.topic_description::before {
+.topic_solution::before {
     content: '';
     width: 203px;
     height: 2px;
@@ -304,6 +303,44 @@ header {
     justify-self: center;
     margin: 52px auto 16px auto;
     background-image: linear-gradient(0deg, #000 0%, #000 100%);
+}
+
+.topic_solution.no-before::before {content: none}
+
+.topic_solution h4 {
+    margin: 10px 0;
+}
+
+.topic_solution .topic_description p {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 22px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.topic_solution .topic_name {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+.topic_solution .topic_name.after::after {
+    content: '';
+    width: 203px;
+    height: 2px;
+    display: flex;
+    justify-self: center;
+    margin: 5px auto;
+    background-image: linear-gradient(0deg, #000 0%, #000 100%);
+}
+
+.topic_solution .topic_caption {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: left;
 }
 
 .separation_bar {

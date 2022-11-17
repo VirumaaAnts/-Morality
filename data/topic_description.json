@@ -1,26 +1,63 @@
 [
     {
-        "category": "Depression"
+        "category": "Depression",
+        "info": {
+            "captions": ["Wait and watch", "An exercise", "Self-help", "Antidepressants"],
+            "descriptions": [
+                "If you have mild depression, you should wait a while to see if it goes away on its own. In this case, after 2 weeks you will see the result.", 
+                "There is evidence that exercise can help with depression, and it is one of the main treatments for mild depression. You may be assigned to group classes.",
+                "Talking about your feelings can be helpful. You can talk to a friend or relative, and ask your GP or local mental health service if there are any self-help groups for people with depression in your area.",
+                "Antidepressants are medicines that treat the symptoms of depression. There are many different types of antidepressants.\n\nThey should be prescribed by a doctor, usually for moderate to severe depression."
+            ]
+        }
     },
     {
-        "category": "Relations"
+        "category": "Relations",
+        "info": {
+            "captions": [],
+            "descriptions": []
+        }
     },
     {
-        "category": "Dependencies"
+        "category": "Dependencies",
+        "info": {
+            "captions": [],
+            "descriptions": []
+        }
     },
     {
-        "category": "Fears"
+        "category": "Fears",
+        "info": {
+            "captions": [],
+            "descriptions": []
+        }
     },
     {
-        "category": "Violence"
+        "category": "Violence",
+        "info": {
+            "captions": [],
+            "descriptions": []
+        }
     },
     {
-        "category": "Family"
+        "category": "Family",
+        "info": {
+            "captions": [],
+            "descriptions": []
+        }
     },
     {
-        "category": "Self-Rating"
+        "category": "Self-Rating",
+        "info": {
+            "captions": [],
+            "descriptions": []
+        }
     },
     {
-        "category": "Sleeping"
+        "category": "Sleeping",
+        "info": {
+            "captions": [],
+            "descriptions": []
+        }
     }
 ]
