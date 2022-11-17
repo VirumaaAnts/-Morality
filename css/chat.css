@@ -88,10 +88,11 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 .chat_field .user_message {
-    background-color: #39b453;
+    background-color: #42d461;
     color: #fff;
 }
 
@@ -99,8 +100,11 @@
 .chat_field .bot_message {
     border: 0.5px solid #848484af;
     border-radius: 3px;
-    padding: 4px 8px;
+    padding: 7px 8px;
     padding-top: 8px;
+    margin: 7px;
+    word-break: break-all;
+    max-width: 80%;
 
     font-family: 'Manjari';
     font-weight: 400;
@@ -148,6 +152,10 @@
 }
 .bottom_panel .send {
     cursor: pointer;
+}
+#botStatus {
+    height: 20px;
+    margin-left: 5px;
 }
 .whistBot {
     display: none;    

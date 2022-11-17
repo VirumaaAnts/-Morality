@@ -41,6 +41,7 @@ $(document).ready(() => {
                 // Open chat
                 $('.assistant_chat').show();
                 $('.assistant_chat').animate({'opacity': 1}, 400);
+                $('#message').focus();
 
                 $('#assistant').animate({'bottom': '40px'}, 250, 'linear');
                 const assist_styles = $('#assistant').prop('style');
