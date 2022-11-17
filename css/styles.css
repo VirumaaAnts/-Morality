@@ -174,7 +174,6 @@ header {
     position: relative;
     padding-top: 80px;
 }
-
 .topic h1 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -193,10 +192,20 @@ header {
     background-image: linear-gradient(0deg, #000 0%, #000 100%);
 }
 
-.blocks_topic { margin-top: 35px; }
-
-.blocks_topic .top_row,
-.blocks_topic .bottom_row {
+.blocks_topic {
+    margin-top: 35px;
+}
+.blocks_topic div {
+    cursor: pointer;
+}
+.blocks_topic div p {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.first_line_topic,
+.second_line_topic {
     display: flex;
     width: 1384px;
     justify-content: space-between;
