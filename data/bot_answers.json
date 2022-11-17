@@ -6,5 +6,9 @@
     {
         "message": "help",
         "answer": "Choose your problem category:\u000a \u000aDepression\u000aRelations\u000aDependencies\u000aFears\u000aViolence\u000aFamily\u000aSelf-Rating\u000aSleeping"
+    },
+    {
+        "message": "bb",
+        "answer": "bye ty"
     }
 ]

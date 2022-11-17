@@ -38,7 +38,8 @@ const renderUserMessage = (message) => {
     const answer = answers.find(ans => ans.message == message);
     if(answer != null) {
         renderBotAnswer(answer.answer);
-    } else {
+    }
+    else {
         renderBotAnswer(null);
     }
 };
@@ -47,16 +48,15 @@ const renderUserMessage = (message) => {
 function renderBotAnswer(botAnswer) {  
     $('#botStatus').removeClass('whistBot');
     $('#botStatus').addClass('botTyping');
-    $('.chat_field').css('height', '316px');
+    // $('.chat_field').css('height', '310px');
     $('#message').val('');
-
     setTimeout(() => {
         renderAnswer();
     }, 1000);
     function renderAnswer() {
         $('#botStatus').removeClass('botTyping');
         $('#botStatus').addClass('whistBot');
-        $('.chat_field').css('height', '336px');
+        // $('.chat_field').css('height', '336px');
         $('#message').removeAttr('disabled');
         $('#message').focus();
 
@@ -72,8 +72,14 @@ function renderBotAnswer(botAnswer) {
         botMessageElem.style = 'white-space: pre';
         botMessageElem.append(botNode);
         $('.chat_field').append(botMessageElem);
-
+        setTimeout(() => {
+            if(botAnswer == 'bye ty'){
+                console.log(botAnswer);
+                $('.assistant_chat').fadeOut();
+            }
+        }, 300);
         document.querySelector('.chat_field').scrollTop = document.querySelector('.chat_field').scrollHeight;
     }
+    document.querySelector('.chat_field').scrollTop = document.querySelector('.chat_field').scrollHeight;
 
 }
