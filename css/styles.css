@@ -390,7 +390,7 @@ header {
     position: absolute;
     left: -35%;
     bottom: 50%;
-    width: 535px;
+    width: 605px;
     height: 2px;
 }
 
@@ -402,7 +402,15 @@ header {
     align-items: center;
     justify-content: center;
 }
-
+.left_side p {
+    width: 511px;
+    text-align: justify;
+    color: #797979;
+    margin-top: 30px;
+}
+.left_side p strong{
+    color: #734912;
+}
 form input {
     width: 100%;
     height: 56px;
@@ -420,7 +428,6 @@ form input {
     font-weight: 500;
     font-size: 22px;
 }
-
 form input:nth-child(1) {
     margin-top: 0;
 }
