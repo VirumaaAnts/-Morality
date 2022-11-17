@@ -203,16 +203,24 @@ header {
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+
+    transform: skewX(-30deg);
+    font-family: 'Manjari', sans-serif;
+    margin: 0;
+    text-transform: capitalize;
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 28px;
 }
-.first_line_topic,
-.second_line_topic {
+.top_row,
+.bottom_row {
     display: flex;
     width: 1384px;
     justify-content: space-between;
     margin-bottom: 15px;
 }
 
-.blocks_topic .top_row a {
+.blocks_topic .top_row div {
     transform: skewX(30deg);
     width: 326px;
     height: 99px;
@@ -227,18 +235,7 @@ header {
 .blocks_topic .top_row :nth-child(3) { background: #FFEEC1; }
 .blocks_topic .top_row :nth-child(4) { background: #D1FFC1; }
 
-.blocks_topic .top_row a p,
-.blocks_topic .bottom_row a p {
-    transform: skewX(-30deg);
-    font-family: 'Manjari', sans-serif;
-    margin: 0;
-    text-transform: capitalize;
-    margin-top: 5px;
-    font-weight: 700;
-    font-size: 28px;
-}
-
-.blocks_topic .bottom_row a {
+.blocks_topic .bottom_row div {
     transform: skewX(-30deg);
     width: 326px;
     height: 99px;
@@ -253,26 +250,26 @@ header {
 .blocks_topic .bottom_row :nth-child(3) { background: #C1CFFF; }
 .blocks_topic .bottom_row :nth-child(4) { background: #D9C1FF; }
 
-.blocks_topic .bottom_row a p { transform: skewX(30deg); }
+.blocks_topic .bottom_row div p { transform: skewX(30deg); }
 
 .blocks_topic .top_row :nth-child(n) p,
 .blocks_topic .bottom_row :nth-child(n) p {
     background-color: transparent;
 }
 
-.topic a, 
-.topic a p { 
+.topic div, 
+.topic div p { 
     transition-duration: 0.2s; 
 }
 
-.blocks_topic .top_row a:hover,
-.blocks_topic .bottom_row a:hover {
+.blocks_topic .top_row div:hover,
+.blocks_topic .bottom_row div:hover {
     filter: brightness(0.9) saturate(200%);
     width: calc(47.5% + 5px);
 }
 
-.blocks_topic .top_row a:hover > p,
-.blocks_topic .bottom_row a:hover > p {
+.blocks_topic .top_row div:hover > p,
+.blocks_topic .bottom_row div:hover > p {
     letter-spacing: 1px;
 }
 
