@@ -203,8 +203,8 @@
     .blocks_topic .top_row div,
     .blocks_topic .bottom_row div {
         width: 45%;
+        overflow: hidden;
     }
-    /* width: calc(45% + 50px); */
 }
 @media (max-width:1014px){
     .topic h1 {
@@ -371,7 +371,7 @@
         width: 80%;
     }
     .blocks_topic div p {
-        font-size: 18px;
+        font-size: 20px;
     }
     .blocks_topic .top_row div,
     .blocks_topic .bottom_row div {
