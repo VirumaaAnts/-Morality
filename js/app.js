@@ -20,32 +20,33 @@ $(document).ready(() => {
     // -----------------------------------
 
     // Topic low size screen
-    topicHover();
-    $(window).resize(topicHover);
-    function topicHover() {
-        $('.topic_theme').mouseover(function() {
-            if($(window).width() <= 1050) {
-                $('.topic_theme').removeAttr('style');
-                const topicPosition = Number($(this).attr('data-position'));
-                if(topicPosition % 2 == 0) {
-                    // Even number
-                    const prevTopic = $('.blocks_topic').find(`[data-position=${topicPosition - 1}]`);
-                    $(this).css('width', 'calc(40% + 20%)');
-                    prevTopic.css('width', 'calc(50% - 20%)');
-                } else {
-                    // Odd number
-                    const nextTopic = $('.blocks_topic').find(`[data-position=${topicPosition + 1}]`);
-                    $(this).css('width', 'calc(40% + 18%)');
-                    nextTopic.css('width', 'calc(50% - 18%)');
-                }
-            } else {
-                $('.topic_theme').removeAttr('style');
-            }
-        });
-        $('.topic_theme').mouseleave(function() {
+    $(window).resize(function() {
+        if($(window).width() >= 1050 || $(window).width() < 500) {
             $('.topic_theme').removeAttr('style');
-        });
-    }
+        }
+    });
+    $('.topic_theme').mouseover(function() {
+        if($(window).width() <= 1050 && $(window).width() > 500) {
+            $('.topic_theme').removeAttr('style');
+            const topicPosition = Number($(this).attr('data-position'));
+            if(topicPosition % 2 == 0) {
+                // Even number
+                const prevTopic = $('.blocks_topic').find(`[data-position=${topicPosition - 1}]`);
+                $(this).css('width', 'calc(40% + 18%)');
+                prevTopic.css('width', 'calc(50% - 18%)');
+            } else {
+                // Odd number
+                const nextTopic = $('.blocks_topic').find(`[data-position=${topicPosition + 1}]`);
+                $(this).css('width', 'calc(40% + 18%)');
+                nextTopic.css('width', 'calc(50% - 18%)');
+            }
+            $('.topic_theme').mouseleave(function() {
+                $('.topic_theme').removeAttr('style');
+            });
+        } else {
+            $('.topic_theme').removeAttr('style');
+        }
+    });
     // -----------------------------------
 
     // FAQs dropdown
