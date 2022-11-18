@@ -30,8 +30,8 @@ $(document).ready(() => {
                 if(topicPosition % 2 == 0) {
                     // Even number
                     const prevTopic = $('.blocks_topic').find(`[data-position=${topicPosition - 1}]`);
-                    $(this).css('width', 'calc(40% + 20%)');
-                    prevTopic.css('width', 'calc(50% - 20%)');
+                    $(this).css('width', 'calc(40% + 18%)');
+                    prevTopic.css('width', 'calc(50% - 18%)');
                 } else {
                     // Odd number
                     const nextTopic = $('.blocks_topic').find(`[data-position=${topicPosition + 1}]`);
