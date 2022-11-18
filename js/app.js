@@ -23,10 +23,10 @@ $(document).ready(() => {
     topicHover();
     $(window).resize(topicHover);
     function topicHover() {
-        if($(window).width() >= 1050) {
-            $('.topic_theme').mouseover(function() {
+        $('.topic_theme').mouseover(function() {
+            if($(window).width() <= 1050) {
+                $('.topic_theme').removeAttr('style');
                 const topicPosition = Number($(this).attr('data-position'));
-                $('.topic_theme').css('width', '45%');
                 if(topicPosition % 2 == 0) {
                     // Even number
                     const prevTopic = $('.blocks_topic').find(`[data-position=${topicPosition - 1}]`);
@@ -35,12 +35,16 @@ $(document).ready(() => {
                 } else {
                     // Odd number
                     const nextTopic = $('.blocks_topic').find(`[data-position=${topicPosition + 1}]`);
-                    $(this).css('width', 'calc(40% + 20%)');
-                    nextTopic.css('width', 'calc(50% - 20%)');
+                    $(this).css('width', 'calc(40% + 18%)');
+                    nextTopic.css('width', 'calc(50% - 18%)');
                 }
-            });
-        }
-        return;
+            } else {
+                $('.topic_theme').removeAttr('style');
+            }
+        });
+        $('.topic_theme').mouseleave(function() {
+            $('.topic_theme').removeAttr('style');
+        });
     }
     // -----------------------------------
 
