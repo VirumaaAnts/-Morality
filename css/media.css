@@ -379,7 +379,9 @@
     }
     .blocks_topic .top_row div,
     .blocks_topic .bottom_row div {
-        width: 100%;
+        width: 85%;
+        margin-bottom: 5px;
+        margin-top: 5px;
     }
 
     .blocks_topic .top_row div:nth-child(1),
@@ -409,6 +411,13 @@
     .blocks_topic .bottom_row div:nth-child(4) p {
         transform: skewX(-30deg);
     }
+    .blocks_topic .top_row div:hover,
+    .blocks_topic .bottom_row div:hover {
+        filter: brightness(0.9) saturate(200%);
+        width: 72.5%;
+        margin: 13px auto;
+        height: calc(80px - 16px);
+    }
 }
 @media (max-width:400px) {
     .top_panel .search_bar input {
@@ -436,6 +445,11 @@
     .blocks_topic .top_row div,
     .blocks_topic .bottom_row div {
         height: 75px;
+        width: 80%;
+    }
+    .blocks_topic .top_row div:hover,
+    .blocks_topic .bottom_row div:hover {
+        height: calc(75px - 16px);
     }
 }
 @media (max-width:340px) {
