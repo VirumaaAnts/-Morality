@@ -97,6 +97,9 @@
     .consultation_front .left_side {
         width: 60%;
     }
+    .questions_list {
+        width: 70%;
+    }
     .footer_left p {
         width: 250px;
         margin-right: 100px;
@@ -128,6 +131,9 @@
     }
     .line_form {
         display: none;
+    }
+    .questions_list {
+        width: 80%;
     }
     .footer_left p {
         margin-right: 0px;
@@ -180,6 +186,12 @@
         background-color: rgba(255, 255, 255, 0.8);
         padding: 15px;
     }
+    .question .arrow_container {
+        width: 10%;
+    }
+    .question .question_text {
+        width: 90%;
+    }
 }
 @media (max-width:800px) {
 }
@@ -204,6 +216,12 @@
     form .send span::after {
         width: 24%;
     }
+    .question .arrow_container {
+        width: 15%;
+    }
+    .question .question_text {
+        width: 85%;
+    }
 }
 @media (max-width:600px) {
     .consultation_front h2 {
@@ -220,6 +238,10 @@
     }
     .consultation_front .left_side {
         width: 95%;
+    }
+    .faq .top_panel {
+        height: max-content;
+        padding-bottom: 26px;
     }
 }
 @media (max-width:550px) {
@@ -258,8 +280,19 @@
         background-color: transparent;
         padding: 0;
     }
+    .question .arrow_container {
+        width: 20%;
+    }
+    .question .question_text {
+        width: 80%;
+    }
 }
 @media (max-width:400px) {
+    .top_panel .search_bar input {
+        width: 75%;
+        height: 60px;
+        padding-left: 28px;
+    }
 }
 @media (max-width:340px) {
     .footer_left {

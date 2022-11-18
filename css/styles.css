@@ -511,6 +511,10 @@ form .send:hover {
     width: 100%;
     padding-bottom: 50px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .faq .top_panel {
@@ -520,18 +524,20 @@ form .send:hover {
 }
 
 .faq .top_panel h2 {
-    width: 100%;
+    width: 90%;
     font-family: 'Manrope';
     font-weight: 800;
     font-size: 36px;
     text-align: center;
     color: #fff;
-    margin: 0;
+    margin: 0 auto;
     padding: 26px 0;
 }
 
 .top_panel .search_bar {
     width: 100%;
+    margin: 0;
+    padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -563,7 +569,10 @@ form .send:hover {
     font-weight: 600;
     font-size: 32px;
 }
-
+.questions_title {
+    margin-left:60px;
+    margin-right:60px;
+}
 .questions_list {
     width: 62%;
     border: 2px solid #77652D;
