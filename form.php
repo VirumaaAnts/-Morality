@@ -6,5 +6,6 @@ $headers = array(
     'From' => $_POST["email"]
 );
 
-mail($to, $subject, $message, $headers);
+// mail($to, $subject, $message, $headers);
+echo 1;
 ?>
