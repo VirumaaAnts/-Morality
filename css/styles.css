@@ -11,8 +11,11 @@
 
 html {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
-
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 body {
     font-family: 'Manjari', sans-serif;
     margin: 0;
@@ -172,17 +175,19 @@ header {
 .topic h1 {
     font-family: 'Montserrat';
     font-weight: 600;
-    width: max-content;
+    width: 100%;
     font-size: 48px;
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 70px;
 }
 
 .topic h1::before,
 .topic h1::after {
     content: '';
+    display: flex;
     width: 16vw;
     height: 3px;
     margin: 0 46px;
@@ -381,7 +386,7 @@ header {
     font-weight: 600;
     font-size: 48px;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
 .h2_black_line_up{
@@ -463,6 +468,7 @@ form input:nth-child(1) {
 form input:nth-child(3) {
     padding-bottom: 162px;
     margin-bottom: 0;
+    height: 220px;
 }
 
 form .send {

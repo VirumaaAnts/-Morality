@@ -19,6 +19,31 @@ $(document).ready(() => {
     }
     // -----------------------------------
 
+    // Topic low size screen
+    topicHover();
+    $(window).resize(topicHover);
+    function topicHover() {
+        if($(window).width() >= 1050) {
+            $('.topic_theme').mouseover(function() {
+                const topicPosition = Number($(this).attr('data-position'));
+                $('.topic_theme').css('width', '45%');
+                if(topicPosition % 2 == 0) {
+                    // Even number
+                    const prevTopic = $('.blocks_topic').find(`[data-position=${topicPosition - 1}]`);
+                    $(this).css('width', 'calc(40% + 20%)');
+                    prevTopic.css('width', 'calc(50% - 20%)');
+                } else {
+                    // Odd number
+                    const nextTopic = $('.blocks_topic').find(`[data-position=${topicPosition + 1}]`);
+                    $(this).css('width', 'calc(40% + 20%)');
+                    nextTopic.css('width', 'calc(50% - 20%)');
+                }
+            });
+        }
+        return;
+    }
+    // -----------------------------------
+
     // FAQs dropdown
     $('.question').click(function() {
         $(this).find('.arrow_container').children().toggleClass('active_question');
