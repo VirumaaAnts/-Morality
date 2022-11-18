@@ -38,12 +38,16 @@ function initChat() {
     
         // Get answer from db
         const answer = answers.find(ans => ans.message == message);
-        if(answer != null) {
-            renderBotAnswer(answer.answer);
+        async function compareExsAnswers() {
+            
+
+            if(answer != null) {
+                renderBotAnswer(answer.answer);
+            } else {
+                renderBotAnswer(null);
+            }
         }
-        else {
-            renderBotAnswer(null);
-        }
+        compareExsAnswers();
     };
     
     // Rendering bot answer
