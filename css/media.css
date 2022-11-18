@@ -154,13 +154,7 @@
         margin-right: 15px;
     }
 }
-@media (max-width:1000px) and (min-width:951px){
-    .h2_black_line_up{
-        width: 320px;
-    }
-    .h2_black_line_down{
-        width: 320px;
-    }
+@media (max-width:1000px){
     form .send span::before,
     form .send span::after {
         content: "";
