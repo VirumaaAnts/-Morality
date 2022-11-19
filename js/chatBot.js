@@ -73,7 +73,6 @@ function initChat() {
                 botNode = document.createTextNode("I'm just robot, genius...");
             }
             botMessageElem.classList.add('bot_message');
-            botMessageElem.style = 'white-space: pre';
             botMessageElem.append(botNode);
             $('.chat_field').append(botMessageElem);
             setTimeout(() => {
