@@ -12,19 +12,33 @@ $(document).ready(() => {
             $('.logo').css({'margin-left': '12.5vw'});
             $('.links').css({'margin-left': '50px'});
         } else {
-            $('header').removeAttr('style');
-            $('.logo').removeAttr('style');
-            $('.links').removeAttr('style');
+            if($(".burger-menu").css('display') != 'block'){
+                $('header').removeAttr('style');
+                $('.logo').removeAttr('style');
+                $('.links').removeAttr('style');
+            }
+        }
+    }
+    // -----------------------------------
+
+    // Burger-Menu
+    $(window).resize(burgerChange);
+    burgerChange();
+    function burgerChange(){
+        if($(window).width() <= 1400){
+            $(".burger-menu").css('display', 'block');
+            $(".links").css('display', 'none');
+        }else{
+            $(".burger-menu").css('display', 'none');
+            $(".links").css('display', 'flex');
+        }
+        if($(window).width() >= 1050 || $(window).width() < 500) {
+            $('.topic_theme').removeAttr('style');
         }
     }
     // -----------------------------------
 
     // Topic low size screen
-    $(window).resize(function() {
-        if($(window).width() >= 1050 || $(window).width() < 500) {
-            $('.topic_theme').removeAttr('style');
-        }
-    });
     $('.topic_theme').mouseover(function() {
         if($(window).width() <= 1050 && $(window).width() > 500) {
             $('.topic_theme').removeAttr('style');
