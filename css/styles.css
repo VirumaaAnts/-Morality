@@ -246,6 +246,7 @@ header {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 2;
 }
 
 /* -- Home page end -- */
@@ -532,7 +533,7 @@ header {
 form input, form textarea {
     width: 100%;
     height: 56px;
-
+    padding-right: 20px;
     background-color: #F5F2F1;
     border: 1px solid rgba(0, 0, 0, 0.28);
     border-radius: 5px;
@@ -556,7 +557,6 @@ form textarea {
     margin-bottom: 0;
     height: 220px;
     padding-top: 12px;
-    padding-right: 20px;
 }
 
 form textarea::-webkit-scrollbar{

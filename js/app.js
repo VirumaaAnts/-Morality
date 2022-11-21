@@ -3,7 +3,7 @@ $(document).ready(() => {
     headerChange();
     $(window).scroll(headerChange);
     $(window).resize(e => {
-        if ($(window).width() <= 583) {
+        if ($(window).width() <= 600) {
             $('header').css({
                 'background-color': '#fff',
                 'position': 'fixed',
