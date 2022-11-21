@@ -471,6 +471,7 @@ form textarea {
     margin-bottom: 0;
     height: 220px;
     padding-top: 12px;
+    padding-right: 20px;
 }
 
 form textarea::-webkit-scrollbar{
@@ -484,6 +485,7 @@ form textarea::-webkit-scrollbar{
 }
 .radio {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .radiobox {
     margin: 5px;
@@ -491,9 +493,13 @@ form textarea::-webkit-scrollbar{
 .radiobox input {
     height: 30px;
     width: 30px;
+    margin: 0;
     margin-right: 5px;
 }
-
+.radiobox label {
+    margin-top: 3px;
+    align-self: center;
+}
 form .send {
     width: 100%;
     height: 56px;
