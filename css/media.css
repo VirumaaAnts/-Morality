@@ -1,4 +1,7 @@
 @media (max-width:1800px) {
+    .img_div_home {
+        right: 7%;
+    }
     .logo {
         margin-left: 26vw;
     }
@@ -24,6 +27,9 @@
     }
 }
 @media (max-width:1700px) {
+    .img_div_home {
+        right: 5%;
+    }
     .logo {
         margin-left: 26.5vw;
     }
@@ -46,6 +52,9 @@
     }
     .consultation_front .right_side img {
         width: 90%;
+    }
+    .img_div_home {
+        right: 3%;
     }
 }
 @media (max-width:1500px) {
@@ -74,16 +83,31 @@
     .topic_solution {
         width: 85%;
     }
+    .img_div_home {
+        right: 0%;
+    }
 }
 @media (max-width:1400px) {
+    .img_div_home {
+        width: 550px;
+        height: 40%;
+        right: 5%;
+    }
     .consultation_front .left_side form, .left_side p {
         width: 85%;
     }
     .consultation_front .right_side img {
         width: 100%;
     }
+
 }
 @media (max-width:1300px) {
+    .logo {
+        margin-left: 29.5vw;
+    }
+    .img_div_home {
+        right: 1.5%;
+    }
     .h2_black_line_up{
         width: 350px;
     }
@@ -111,6 +135,21 @@
     }
 }
 @media (max-width:1200px) {
+    .logo {
+        margin-left: 31.5vw;
+        margin-right: -30px;
+    }
+    .light_green {
+        background-color: #f7ffeeef;
+    }
+    .img_div_home {
+        width: 100%;
+        height: 80%;
+        margin-top: 60px;
+        z-index: 0;
+        opacity: 40%;
+        filter: blur(2px);
+    }
     .consultation_front .left_side {
         width: 60%;
     }
@@ -138,6 +177,10 @@
     .consultation_front .left_side {
         width: 95%;
         z-index: 10;
+    }
+    .radiobox label {
+        color: white;
+        text-shadow: 1px 1px 1px black, 0px 1px 1px black, -1px 1px 1px black, -1px 0px 1px black, -1px -1px 1px black, 0px -1px 1px black, 1px -1px 1px black, 1px 0px 1px black;
     }
     .consultation_front .right_side {
         width: 100%;
@@ -225,6 +268,9 @@
     }
 }
 @media (max-width:1000px){
+    .logo {
+        margin-left: 33.5vw;
+    }
     form .send span::before,
     form .send span::after {
         content: "";
@@ -238,6 +284,9 @@
 @media (max-width:950px) {
 }
 @media (max-width:900px) {
+    .logo {
+        margin-left: 35.5vw;
+    }
     .topic h1 {
         width: 100%;
     }
@@ -261,6 +310,9 @@
     }
 }
 @media (max-width:800px) {
+    .logo {
+        margin-left: 38.5vw;
+    }
 }
 @media (max-width:770px) {
     .footer_right .place {
@@ -305,9 +357,31 @@
     }
 }
 @media (max-width:600px) {
+    .menubox{
+        width: 283px;
+        text-align: center;
+    }
+    .logo {
+        margin-left: 5.5vw;
+    }
+    .light_green {
+        font-size: 12px;
+        line-height: 60px;
+        width: 300px;
+        text-shadow: 1px 1px 1px rgb(146, 146, 146);
+        left: 11vw;
+        background-color: #f7ffeeef;
+    }
+    .img_div_home {
+        height: 60%;
+    }
+    .topic_container h1 {
+        font-size: 38px;
+    }
     .consultation_front h2 {
         width: 90%;
         text-align: center;
+        font-size: 38px;
     }
     .h2_black_line_up{
         width: 320px;
@@ -351,6 +425,9 @@
     }
 }
 @media (max-width:500px) {
+    .light_green {
+        left: 6vw;
+    }
     form .send span::before,
     form .send span::after {
         width: 15%;
@@ -419,7 +496,22 @@
         height: calc(80px - 16px);
     }
 }
+@media (max-width:450px) {
+    .light_green {
+        left: 2vw;
+    }
+    .menubox {
+        width: 100%;
+    }
+}
 @media (max-width:400px) {
+    .light_green {
+        left: 0vw;
+        background-color: #f7ffeee0;
+    }
+    .menu-btn {
+        right: 20px;
+    }
     .top_panel .search_bar input {
         width: 75%;
         height: 60px;
@@ -453,6 +545,9 @@
     }
 }
 @media (max-width:340px) {
+    .logo_name {
+        display: none;
+    }
     .footer_left {
         padding: 10px;
     }
