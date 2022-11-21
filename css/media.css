@@ -434,6 +434,10 @@
         margin-left: 10px;
         margin-right: 10px;
     }
+    .radiobox label {
+        color: black;
+        text-shadow: unset;
+    }
     .consultation_front .right_side {
         display: none;
     }
