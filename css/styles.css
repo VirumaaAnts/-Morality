@@ -470,6 +470,7 @@ form textarea {
     padding-bottom: 162px;
     margin-bottom: 0;
     height: 220px;
+    padding-top: 12px;
 }
 
 form textarea::-webkit-scrollbar{
