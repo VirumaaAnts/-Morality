@@ -358,8 +358,7 @@
 }
 @media (max-width:600px) {
     .menubox{
-        width: 283px;
-        text-align: center;
+        width: 283px;text-align: center;
     }
     .logo {
         margin-left: 5.5vw;

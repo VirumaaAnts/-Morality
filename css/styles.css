@@ -136,6 +136,7 @@ header {
     position: fixed;
     visibility: hidden;
     top: 0;
+    text-align: center;
     right: -100%;
     width: 300px;
     height: 100vh;

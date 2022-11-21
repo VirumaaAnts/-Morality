@@ -1,5 +1,14 @@
 $(document).ready(() => {
     // Header logic
+    $(window).click(e => {
+        const target = e.target;
+        if (!target.closest('#menu-toggle') && !target.closest('.menubox')) { 
+            document.querySelector("#menu-toggle").checked = false;
+        }
+    });
+    $(".menu-item").click(function () {
+        document.querySelector("#menu-toggle").checked = false;
+    });
     headerChange();
     $(window).scroll(headerChange);
     $(window).resize(e => {
