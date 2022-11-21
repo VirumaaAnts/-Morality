@@ -5,7 +5,7 @@ $(document).ready(function () {
         $.ajax({
             type: "post",
             url: "../form.php",
-            data: {"name":this.name.value, "email":this.email.value, "description":this.description.value},
+            data: {"name":form.name.value, "email":form.email.value, "age":form.age.value, "description":form.description.value, "sex":form.sex.value},
             dataType: "html",
             success: function (response) {
                 if (response == 1){
@@ -16,7 +16,6 @@ $(document).ready(function () {
                     $('.send').attr('disabled',true);
                     $(".send").css({
                         background: "rgba(255,255,255)"
-                        
                     });
                     setTimeout(function(){
                         $("#send_text").text("SEND");
