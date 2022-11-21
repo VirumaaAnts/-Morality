@@ -1,5 +1,18 @@
 $(document).ready(() => {
     // Header logic
+    $(window).click(e => {
+        const target = e.target;
+        // if(target.closest('#menu-toggle') && document.querySelector("#menu-toggle").checked == true){
+        //     console.log(234234);
+        //     document.querySelector("#menu-toggle").checked = false;
+        // }
+        if (!target.closest('#menu-btn') && !target.closest('.menubox') && $(".menubox").css("visibility") == "visible") { 
+            document.querySelector("#menu-toggle").checked = false;
+        }
+    });
+    $(".menu-item").click(function () {
+        document.querySelector("#menu-toggle").checked = false;
+    });
     headerChange();
     $(window).scroll(headerChange);
     $(window).resize(e => {
