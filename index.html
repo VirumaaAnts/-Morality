@@ -53,7 +53,12 @@
             </div>
             <span id="botStatus" class="whistBot">
                 <span class="typing_alert">Assistant is typing</span>
-                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </span>
             <div class="bottom_panel">
                 <div class="input_field">
@@ -78,7 +83,7 @@
         <!-- Topic page -->
         <div class="topic" id="topic-page">
             <div class="topic_container">
-            <h1>Choose Your Topic</h1>
+                <h1>Choose Your Topic</h1>
                 <div class="blocks_topic">
                     <div class="top_row">
                         <div class="topic_theme" data-position="1">
@@ -125,20 +130,32 @@
                     <h2>Consult our experts</h2>
                     <div class="h2_black_line_down"></div>
                     <form name="send" id="send">
-                        <input type="text" name="name" placeholder="Your Name *" required>
-                        <input type="email" name="email" placeholder="E-mail *" required>
-                        <input type="text" name="description" placeholder="Description *" required>
-                        <button class="send"><span id="send_text">SEND</span></button>
+                        <input type="text" name="name" placeholder="Your Name *">
+                        <input type="text" name="email" placeholder="E-mail *">
+                        <input type="number" name="age" placeholder="Age *" required>
+                        <div class="radio">
+                            <div class="radiobox">
+                                <input type="radio" name="sex" id="" value="man">
+                                <label for="sex">Man</label>
+                            </div>
+                            <div class="radiobox">
+                                <input type="radio" name="sex" id="" value="woman">
+                                <label for="sex">Woman</label>
+                            </div>
+                        </div>
+                        <textarea name="description" placeholder="Description *" required cols="30"
+                            rows="10"></textarea>
+                        <button class="send"><span>SEND</span></button>
                     </form>
                     <p>
-                        <strong>For the best answer</strong>, we advise you <strong>to describe the situation</strong> 
-                        in as much detail as possible, write  <strong>gender, age</strong> and your 
-                        <strong>current condition</strong>. Try to <strong>write correctly</strong>, 
-                        observing punctuation, this will help us better understand you, as well. 
-                        <strong>Data is not saved, everything is anonymous</strong>. 
+                        <strong>For the best answer</strong>, we advise you <strong>to describe the situation</strong>
+                        in as much detail as possible, write <strong>gender, age</strong> and your
+                        <strong>current condition</strong>. Try to <strong>write correctly</strong>,
+                        observing punctuation, this will help us better understand you, as well.
+                        <strong>Data is not saved, everything is anonymous</strong>.
                         The answer will come <strong>within half an hour</strong> on any day of the week.
                     </p>
-                        <!-- All emails are counted to improve the quality of responses.  -->
+                    <!-- All emails are counted to improve the quality of responses.  -->
                 </div>
                 <div class="line_form"></div>
                 <div class="right_side">
@@ -169,7 +186,10 @@
                     <div class="question_answer">
                         <p><b>Answer:</b></p>
                         <p>
-                            You can always find a virtual assistant in the current situation. In our case, we offer help in the form of online counseling through a form and a short self-help guide through a chatbot and topics. Also, you can always call us on the working phone number. This can help to reduce tension significantly even without active live speech.
+                            You can always find a virtual assistant in the current situation. In our case, we offer help
+                            in the form of online counseling through a form and a short self-help guide through a
+                            chatbot and topics. Also, you can always call us on the working phone number. This can help
+                            to reduce tension significantly even without active live speech.
                         </p>
                     </div>
                 </div>
@@ -185,10 +205,13 @@
                     <div class="question_answer">
                         <p><b>Answer:</b></p>
                         <p>
-                            It hurts our feelings and hurts our pride. It leaves scars on the heart and creates an unwanted feeling. But don't panic! And here is the solution too. Here are some tips. <br> <br>
+                            It hurts our feelings and hurts our pride. It leaves scars on the heart and creates an
+                            unwanted feeling. But don't panic! And here is the solution too. Here are some tips. <br>
+                            <br>
                             <strong>1.</strong> Accept that the world is not like a happy movie. <br>
                             <strong>2.</strong> Don't follow social networks. <br>
-                            <strong>3.</strong> Don't call anyone, even if you really want to and even if you've been drinking. <br>
+                            <strong>3.</strong> Don't call anyone, even if you really want to and even if you've been
+                            drinking. <br>
                             <strong>4.</strong> Recognize that you have no control over other people's will. <br> <br>
                             Remember about yourself!
                         </p>
@@ -207,10 +230,12 @@
                         <p><b>Answer:</b></p>
                         <p>
                             <strong>Always remember...</strong> <br> <br>
-                            NOBODY deserves to be a victim of aggression. Aggression is not your fault. You are not alone. <br>
+                            NOBODY deserves to be a victim of aggression. Aggression is not your fault. You are not
+                            alone. <br>
                             Every day, at least half an hour, be alone, organize your thoughts. <br>
                             Find a way to completely relax: yoga, massage, aromatherapy. <br>
-                            Ignore anything and anyone who gives you hard feelings. When interacting with such people, remember something pleasant. <br>
+                            Ignore anything and anyone who gives you hard feelings. When interacting with such people,
+                            remember something pleasant. <br>
                             These are the main tips, you can read more in our topic.
                         </p>
                     </div>
@@ -230,10 +255,16 @@
                             <strong>Here are some ways you can do it:</strong> <br>
                         </p>
                         <ul>
-                            <li>Share family stories and memories. It can help children appreciate things that are not obvious or that they have forgotten, such as their mother's athletic achievements when she was younger, or how an older sister helped take care of her baby brother after he was born.</li>
+                            <li>Share family stories and memories. It can help children appreciate things that are not
+                                obvious or that they have forgotten, such as their mother's athletic achievements when
+                                she was younger, or how an older sister helped take care of her baby brother after he
+                                was born.</li>
                             <li>Include everyone in the conversation when talking about the day's events.</li>
-                            <li>Take an interest in each other's lives. For example, make time to visit each other's sporting events, drama performances, art exhibitions, and so on.</li>
-                            <li>Recognize each other's differences, talents, and abilities, and use each other's strengths. For example, if you praise and thank your teen for listening to a younger sibling read, your child will begin to see himself as a helpful and caring person.</li>
+                            <li>Take an interest in each other's lives. For example, make time to visit each other's
+                                sporting events, drama performances, art exhibitions, and so on.</li>
+                            <li>Recognize each other's differences, talents, and abilities, and use each other's
+                                strengths. For example, if you praise and thank your teen for listening to a younger
+                                sibling read, your child will begin to see himself as a helpful and caring person.</li>
                         </ul>
                     </div>
                 </div>
@@ -249,7 +280,10 @@
                     <div class="question_answer">
                         <p><b>Answer:</b></p>
                         <p>
-                            Avoid any hasty decisions. Leave room for clear thinking so you can choose constructive words and actions. Awareness is the first step to change, so know where you need more restraint. Don't "waste" your isolation reserves by adding unnecessary demands to your personal and work habits.
+                            Avoid any hasty decisions. Leave room for clear thinking so you can choose constructive
+                            words and actions. Awareness is the first step to change, so know where you need more
+                            restraint. Don't "waste" your isolation reserves by adding unnecessary demands to your
+                            personal and work habits.
                         </p>
                     </div>
                 </div>
@@ -264,7 +298,7 @@
                     <span class="logo_name">+Morality</span>
                 </a>
                 <p>
-                    Helping people in difficult situations is our goal and main task. 
+                    Helping people in difficult situations is our goal and main task.
                     <br>Seek help with any vital mental health issues. <br>Mind is our strength.
                 </p>
                 <div>

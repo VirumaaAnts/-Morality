@@ -444,7 +444,7 @@ header {
 .left_side p strong{
     color: #734912;
 }
-form input {
+form input, form textarea {
     width: 100%;
     height: 56px;
 
@@ -460,15 +460,37 @@ form input {
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 22px;
+    resize: none;
 }
 form input:nth-child(1) {
     margin-top: 0;
 }
 
-form input:nth-child(3) {
+form textarea {
     padding-bottom: 162px;
     margin-bottom: 0;
     height: 220px;
+}
+
+form textarea::-webkit-scrollbar{
+    display: none;
+}
+.radio, .radiobox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.radio {
+    margin-top: 10px;
+}
+.radiobox {
+    margin: 5px;
+}
+.radiobox input {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
 }
 
 form .send {
