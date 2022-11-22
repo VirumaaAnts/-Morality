@@ -15,7 +15,8 @@ $(document).ready(() => {
     });
     headerChange();
     $(window).scroll(headerChange);
-    $(window).resize(e => {
+    $(window).resize(headerChange);
+    function headerChange() {
         if ($(window).width() <= 600) {
             $('header').css({
                 'background-color': '#fff',
@@ -33,8 +34,7 @@ $(document).ready(() => {
             $('.logo').removeAttr('style');
             $('.links').removeAttr('style');
         }
-    })
-    function headerChange() {
+
         if ($(window).width() >= 601) {
             if ($(window).scrollTop() > 0) {
                 $('header').css({
@@ -117,6 +117,38 @@ $(document).ready(() => {
         $('.dropdown_arrow').not($(this).find('.arrow_container').children()).removeClass('active_question');
         $('.question_answer').not($(this).find('.question_answer')).slideUp(150);
     });
+    // -----------------------------------
+
+    // Search FAQ
+    $('#searchFaq').keypress(function (e) { 
+        if(e.key == 'Enter') {
+            searchFaq();
+        }
+    });
+    function searchFaq() {
+        const question = document.querySelectorAll('.question');
+        let checkVisibility = 0;
+        for (let i = 0; i < question.length; i++) {
+            let thisQuestion = ((question[i].querySelector('.question_text').
+                    querySelector('p').innerHTML)
+                    .trim())
+                    .toLowerCase();
+            const userSearch = ($('#searchFaq').val()).toLowerCase();
+            if(!(thisQuestion).includes(userSearch)) {
+                question[i].style.display = 'none';
+                checkVisibility++;
+            } else {
+                question[i].style.display = 'flex';
+            }
+        }
+        if(checkVisibility == question.length) {
+            $('.questions_list').css('border', 'none');
+            $('#empty_faqs').show();
+        } else {
+            $('.questions_list').removeAttr('style');
+            $('#empty_faqs').hide();
+        }
+    }
     // -----------------------------------
 
     // Assistant appearance
