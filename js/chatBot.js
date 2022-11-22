@@ -40,18 +40,17 @@ function initChat() {
         const answer = answers.find(ans => ans.message == message);
         async function compareExsAnswers() {
             
-
             if(answer != null) {
-                renderBotAnswer(answer.answer);
+                renderBotAnswer(answer.answer, message);
             } else {
-                renderBotAnswer(null);
+                renderBotAnswer(null, message);
             }
         }
         compareExsAnswers();
     };
     
     // Rendering bot answer
-    function renderBotAnswer(botAnswer) {  
+    function renderBotAnswer(botAnswer, message) {  
         $('#botStatus').removeClass('whistBot');
         $('#botStatus').addClass('botTyping');
         $('#message').val('');
@@ -67,21 +66,22 @@ function initChat() {
             let botNode = '';
             const botMessageElem = document.createElement('div');
             if(botAnswer != null && botAnswer != '') {
-                botNode = document.createTextNode(botAnswer);
+                botNode = botAnswer;
             } 
             else {
-                botNode = document.createTextNode("I'm just robot, genius...");
+                botNode = "I'm just robot, genius...";
             }
             botMessageElem.classList.add('bot_message');
-            botMessageElem.append(botNode);
+            botMessageElem.innerHTML = botNode;
             $('.chat_field').append(botMessageElem);
             setTimeout(() => {
-                if(botAnswer == 'bye ty'){
+                if(message == 'bb'){
                     $('.assistant_chat').fadeOut();
-                    $('.chat_field').html('');
+                    $('.chat_field').html('<div class="bot_message">Choose your problem category:<br> <br>Depression<br>Relations<br>Dependencies<br>Fears<br>Violence<br>Family<br>Self-Rating<br>Sleeping</div>');
+                    // $('.assistant_chat').hide();
                 }
             }, 300);
-            document.querySelector('.chat_field').scrollTop = document.querySelector('.chat_field').scrollHeight;
+            setTimeout(() => { document.querySelector('.chat_field').scrollTop = document.querySelector('.chat_field').scrollHeight;}, 50 );
         }
         document.querySelector('.chat_field').scrollTop = document.querySelector('.chat_field').scrollHeight;
     }

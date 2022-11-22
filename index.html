@@ -36,17 +36,20 @@
         <div class="burger-menu">
             <input id="menu-toggle" type="checkbox" />
             <label class="menu-btn" for="menu-toggle">
-              <span class="span_burger"></span>
+                <span class="span_burger"></span>
             </label>
-         
-            <ul class="menubox">
-                    <li><a class="menu-item" href="#top">Home</a></li>
-                    <li><a class="menu-item" href="#topic-page">Topic</a></li>
-                    <li><a class="menu-item" href="#consultation-page">Consultation</a></li>
-                    <li><a class="menu-item" href="#faq-page">FAQ</a></li>
-            </ul>
         </div>
     </header>
+
+    <div class="menubox">
+        <div class="arrow_container">
+            <img src="images/arrow_back.png" id="close_menu" alt="">
+        </div>
+        <a class="menu-item" href="#top">Home</a>
+        <a class="menu-item" href="#topic-page">Topic</a>
+        <a class="menu-item" href="#consultation-page">Consultation</a>
+        <a class="menu-item" href="#faq-page">FAQ</a>
+    </div>
 
     <div class="wrapper">
         <!-- Assistant button -->
@@ -62,8 +65,11 @@
                 </div>
             </div>
             <div class="chat_field">
-                <!-- <div class="user_message">Hello robot!</div>
-                <div class="bot_message">I'm just robot!</div> -->
+                <!-- <div class="user_message">Hello robot!</div> -->
+                <div class="bot_message">
+                    Choose your problem category:<br>
+                    <br>Depression<br>Relations<br>Dependencies<br>Fears<br>Violence<br>Family<br>Self-Rating<br>Sleeping
+                </div>
             </div>
             <span id="botStatus" class="whistBot">
                 <span class="typing_alert">Assistant is typing</span>
