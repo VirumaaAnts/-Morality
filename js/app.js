@@ -104,6 +104,38 @@ $(document).ready(() => {
     });
     // -----------------------------------
 
+    // Search FAQ
+    $('#searchFaq').keypress(function (e) { 
+        if(e.key == 'Enter') {
+            searchFaq();
+        }
+    });
+    function searchFaq() {
+        const question = document.querySelectorAll('.question');
+        let checkVisibility = 0;
+        for (let i = 0; i < question.length; i++) {
+            let thisQuestion = ((question[i].querySelector('.question_text').
+                    querySelector('p').innerHTML)
+                    .trim())
+                    .toLowerCase();
+            const userSearch = ($('#searchFaq').val()).toLowerCase();
+            if(!(thisQuestion).includes(userSearch)) {
+                question[i].style.display = 'none';
+                checkVisibility++;
+            } else {
+                question[i].style.display = 'flex';
+            }
+        }
+        if(checkVisibility == question.length) {
+            $('.questions_list').css('border', 'none');
+            $('#empty_faqs').show();
+        } else {
+            $('.questions_list').removeAttr('style');
+            $('#empty_faqs').hide();
+        }
+    }
+    // -----------------------------------
+
     // Assistant appearance
     $('#assistant').css({ 'display': 'block', 'animation': 'assistant_animation infinite 5s' });
     setTimeout(() => {

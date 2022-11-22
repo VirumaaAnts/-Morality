@@ -102,7 +102,7 @@ header {
 .burger-menu {
     display: none;
 }
-.menu-btn{
+.menu-btn {
     display: flex;
     align-items: center;
     position: absolute;
@@ -111,7 +111,7 @@ header {
     width: 32px;
     height: 36px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 21;
 }
 .menu-btn > span,
 .menu-btn > span::before,
@@ -131,10 +131,11 @@ header {
     content: '';
     top: 8px;
 }
-.menubox{
+.menubox {
     display: block;
     position: fixed;
     visibility: hidden;
+    z-index: 20;
     top: 0;
     text-align: center;
     right: -100%;
@@ -145,7 +146,8 @@ header {
     list-style: none;
     background-color: #fff;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-    transition-duration: .25s;
+    transition: ease all .6s;
+    transition-timing-function: cubic-bezier(.54,.32,.33,1)
 }
 .menu-item {
     display: block;
@@ -162,6 +164,7 @@ header {
 }
 #menu-toggle{
     opacity: 0;
+    transition-timing-function: cubic-bezier(.86,-0.01,0,.99);
 }
 #menu-toggle:checked ~ .menu-btn > span{
     transform: rotate(45deg);
@@ -709,6 +712,29 @@ form .send:hover {
 
     display: flex;
     flex-wrap: wrap;
+}
+#empty_faqs {
+    width: 100%;
+    text-align: center;
+    display: none;
+    animation: pulseEmpty infinite 1.5s;
+}
+@keyframes pulseEmpty {
+    0% {
+        transform: scale(1);
+        letter-spacing: 0;
+        color: #000;
+    }
+    50% {
+        transform: scale(1.03);
+        color: rgb(73, 73, 73);
+        letter-spacing: 2px;
+    }
+    100% {
+        transform: scale(1);
+        letter-spacing: 0;
+        color: #000;
+    }
 }
 
 .questions_list .question {
