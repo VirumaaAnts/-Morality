@@ -2,10 +2,6 @@ $(document).ready(() => {
     // Header logic
     $(window).click(e => {
         const target = e.target;
-        // if(target.closest('#menu-toggle') && document.querySelector("#menu-toggle").checked == true){
-        //     console.log(234234);
-        //     document.querySelector("#menu-toggle").checked = false;
-        // }
         if (!target.closest('#menu-btn') && !target.closest('.menubox') && $(".menubox").css("visibility") == "visible") { 
             document.querySelector("#menu-toggle").checked = false;
         }
@@ -14,28 +10,16 @@ $(document).ready(() => {
         document.querySelector("#menu-toggle").checked = false;
     });
     headerChange();
+    burgerChange();
     $(window).scroll(headerChange);
-    $(window).resize(headerChange);
+    $(window).resize(() => {
+        headerChange();
+        burgerChange();
+    });
     function headerChange() {
-        if ($(window).width() <= 600) {
-            $('header').css({
-                'background-color': '#fff',
-                'position': 'fixed',
-                'filter': 'drop-shadow(0px 6px 21px rgba(0, 0, 0, 0.15))',
-            });
-            $('.logo').css({ 
-                'margin-left': '12.5vw',
-                'margin-right': '10px'
-            });
-            $('.links').css({ 'margin-left': '50px' });
-        }
-        else {
+        if ($(window).width() >= 601) {
             $('header').removeAttr('style');
             $('.logo').removeAttr('style');
-            $('.links').removeAttr('style');
-        }
-
-        if ($(window).width() >= 601) {
             if ($(window).scrollTop() > 0) {
                 $('header').css({
                     'background-color': '#fff',
@@ -61,15 +45,16 @@ $(document).ready(() => {
                 'position': 'fixed',
                 'filter': 'drop-shadow(0px 6px 21px rgba(0, 0, 0, 0.15))',
             });
-            $('.logo').css({ 'margin-left': '12.5vw' });
+            $('.logo').css({ 
+                'margin-left': '12.5vw',
+                'margin-right': '10px'
+            });
             $('.links').css({ 'margin-left': '50px' });
         }
     }
     // -----------------------------------
 
     // Burger-Menu
-    $(window).resize(burgerChange);
-    burgerChange();
     function burgerChange() {
         if ($(window).width() <= 1050) {
             $(".burger-menu").css('display', 'block');

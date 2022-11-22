@@ -180,7 +180,15 @@
     }
     .radiobox label {
         color: white;
-        text-shadow: 1px 1px 1px black, 0px 1px 1px black, -1px 1px 1px black, -1px 0px 1px black, -1px -1px 1px black, 0px -1px 1px black, 1px -1px 1px black, 1px 0px 1px black;
+        font-weight: 700;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5),
+            0px 1px 1px rgba(0, 0, 0, 0.5),
+            -1px 1px 1px rgba(0, 0, 0, 0.5),
+            -1px 0px 1px rgba(0, 0, 0, 0.5),
+            -1px -1px 1px rgba(0, 0, 0, 0.5),
+            0px -1px 1px rgba(0, 0, 0, 0.5),
+            1px -1px 1px rgba(0, 0, 0, 0.5),
+            1px 0px 1px rgba(0, 0, 0, 0.5);
     }
     .consultation_front .right_side {
         width: 100%;

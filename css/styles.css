@@ -1,5 +1,5 @@
 /* Manjari font */
-@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700;800;900&display=swap');
 /* Paprika font */
 @import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
 /* Montserrat font */
@@ -300,7 +300,7 @@ header {
 .blocks_topic {
     margin-top: 35px;
 }
-.blocks_topic div {
+.blocks_topic .topic_theme {
     cursor: pointer;
 }
 .blocks_topic div p {
@@ -377,7 +377,11 @@ header {
 .blocks_topic .bottom_row div:hover > p {
     letter-spacing: 1px;
 }
-
+.top_row, .bottom_row {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    cursor: auto;
+}
 .topic_solution {
     width: 950px;
     margin-top: 7px;
@@ -575,6 +579,8 @@ form textarea::-webkit-scrollbar{
 .radio {
     margin-top: 10px;
     margin-bottom: 10px;
+    backdrop-filter: blur(6.5px);
+    width: 100%;
 }
 .radiobox {
     margin: 5px;
