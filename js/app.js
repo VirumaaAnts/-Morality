@@ -2,7 +2,8 @@ $(document).ready(() => {
     // Header logic
     headerChange();
     $(window).scroll(headerChange);
-    $(window).resize(e => {
+    $(window).resize(headerChange);
+    function headerChange() {
         if ($(window).width() <= 600) {
             $('header').css({
                 'background-color': '#fff',
@@ -20,8 +21,7 @@ $(document).ready(() => {
             $('.logo').removeAttr('style');
             $('.links').removeAttr('style');
         }
-    })
-    function headerChange() {
+
         if ($(window).width() >= 601) {
             if ($(window).scrollTop() > 0) {
                 $('header').css({
@@ -114,23 +114,27 @@ $(document).ready(() => {
     });
     function searchFaq() {
         const question = document.querySelectorAll('.question');
-        console.log(question.length);
+        let checkVisibility = 0;
         for (let i = 0; i < question.length; i++) {
-            let thisQuestion = (question[i].querySelector('.question_text').querySelector('p').innerHTML).trim();
+            let thisQuestion = ((question[i].querySelector('.question_text').
+                    querySelector('p').innerHTML)
+                    .trim())
+                    .toLowerCase();
             const userSearch = ($('#searchFaq').val()).toLowerCase();
-            if(!(thisQuestion.toLowerCase()).includes(userSearch)) {
+            if(!(thisQuestion).includes(userSearch)) {
                 question[i].style.display = 'none';
+                checkVisibility++;
             } else {
-                question[i].style.removeProperty = 'display';
+                question[i].style.display = 'flex';
             }
         }
-        // if($('.question').css('display') == 'none') {
-        //     $('.questions_list').text('Nothing on your request ...');
-        //     $('.questions_list').css('border', 'none');
-        // } else {
-        //     $('.questions_list').removeAttr('style');
-        //     $('.questions_list').text('');
-        // }
+        if(checkVisibility == question.length) {
+            $('.questions_list').css('border', 'none');
+            $('#empty_faqs').show();
+        } else {
+            $('.questions_list').removeAttr('style');
+            $('#empty_faqs').hide();
+        }
     }
     // -----------------------------------
 
