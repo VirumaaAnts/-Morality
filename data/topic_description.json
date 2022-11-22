@@ -2,62 +2,48 @@
     {
         "category": "Depression",
         "info": {
-            "captions": ["Wait and watch", "An exercise", "Self-help", "Antidepressants"],
-            "descriptions": [
-                "If you have mild depression, you should wait a while to see if it goes away on its own. In this case, after 2 weeks you will see the result.", 
-                "There is evidence that exercise can help with depression, and it is one of the main treatments for mild depression. You may be assigned to group classes.",
-                "Talking about your feelings can be helpful. You can talk to a friend or relative, and ask your GP or local mental health service if there are any self-help groups for people with depression in your area.",
-                "Antidepressants are medicines that treat the symptoms of depression. There are many different types of antidepressants.\n\nThey should be prescribed by a doctor, usually for moderate to severe depression."
-            ]
+            "Stay in touch":"Don't give up on life. Communication can improve your mood. Connecting with friends and family means you have someone to talk to when you're feeling down.", 
+            "Be more active":"Get some exercise. There is evidence that exercise can help improve your mood. If you haven't exercised in a while, start gently by walking for 20 minutes every day.",
+            "Face your fears":"Don't avoid what seems difficult to you. When people feel down or anxious, they sometimes avoid talking to other people. Some people may lose confidence when they go out, drive, or travel.\n\nWhen this starts to happen, responding to these situations will help them feel more comfortable.",
+            "Don't drink too much alcohol":"For some people, alcohol can be a problem. You may drink more than usual to manage or hide your emotions, or just to pass the time. But alcohol won't help you solve your problems, and it can also make you depressed.",
+            "Try to eat a healthy diet":"Some people do not want to eat when depressed and are at risk of losing weight. Others find comfort in food and may lose weight.\n\nAntidepressants can also affect your appetite.\n\nIf you are concerned about weight loss, weight gain, or how antidepressants affect your appetite, talk to your healthcare provider.",
+            "Have a routine":"When people feel paralyzed, they may not sleep well, stay up late, and sleep during the day. Try to get up at regular times and stick to a routine as much as possible.\n\nLack of a routine can affect how you eat. Try to keep cooking and eating regularly.",
+            "Seeking help for depression":"Seek help if you are still feeling down or depressed after a few weeks.\n\nTreatment for depression includes psychological therapy and antidepressants.\n\nYou may be referred for psychological therapy such as cognitive behavioral therapy (CBT) or counseling. NHS. You do not need a referral from your family doctor."
         }
     },
     {
         "category": "Relations",
         "info": {
-            "captions": [],
-            "descriptions": []
         }
     },
     {
         "category": "Dependencies",
         "info": {
-            "captions": [],
-            "descriptions": []
         }
     },
     {
         "category": "Fears",
         "info": {
-            "captions": [],
-            "descriptions": []
         }
     },
     {
         "category": "Violence",
         "info": {
-            "captions": [],
-            "descriptions": []
         }
     },
     {
         "category": "Family",
         "info": {
-            "captions": [],
-            "descriptions": []
         }
     },
     {
         "category": "Self-Rating",
         "info": {
-            "captions": [],
-            "descriptions": []
         }
     },
     {
         "category": "Sleeping",
         "info": {
-            "captions": [],
-            "descriptions": []
         }
     }
 ]

@@ -1,70 +1,58 @@
-var topics = [];
-
-// Data response
-async function getJsonTopics (topicsRes) {
-    topics = await topicsRes;
-    initTopics();
-}
-
-function initTopics() {
-    const firstTopicColor = $(".topic").css("background-color");
-    const firstTopicColorBackground = $(".topic").css("background");
-    var lastTopicColor;
-    $('.topic').children().children().children().children().click(function () {
-
-        // Comparing topic category with json data
-        const thisTopic = $(this).text().trim();
-        var currentTopic = null;
-        topics.forEach(topic => {
-            if(thisTopic == topic.category) {
-                currentTopic = topic;
+var time = 300
+var clicked_button = ""
+$(document).ready(function () {
+    for(let i of $(".blocks_topic").children().children()){
+        $(i).click(function (e) { 
+            e.preventDefault();
+            let button = this
+            let button_text = $($(button).children()[0]).text()
+            if ( clicked_button != button){
+                $.getJSON("../data/topic_description.json",
+                    function (data, text, request) {
+                        for(let j of data){
+                            if (j.category == button_text && Object.keys(j.info).length != 0){
+                                clicked_button = button
+                                let description = document.createElement("div")
+                                description.className = "topic_description"
+                                let head = document.createElement("h2")
+                                head.className = "topic_name after"
+                                head.textContent= button_text
+                                description.appendChild(head)
+                                for (let q in j.info){
+                                    let block = document.createElement("div")
+                                    block.className = "description_block"
+                                    let header = document.createElement("h4")
+                                    header.className = "topic_caption"
+                                    header.textContent = q
+                                    let text = document.createElement("p")
+                                    text.textContent = j.info[q]
+                                    block.appendChild(header)
+                                    block.appendChild(text)
+                                    description.appendChild(block)
+                                }
+                                $(".topic_solution").slideUp(time,function () {
+                                    $(".topic_solution").empty();
+                                    $(".topic_solution").addClass("no-before");
+                                    $(".topic_container").addClass("topic_click");
+                                    $(".topic_solution").append(description)
+                                    $(".topic").css("background", "linear-gradient(#F7FFEE,"+$(button).css("background-color")+"20%,#F7FFEE 90%");
+                                    $(".topic_solution").slideDown(time);
+                                });
+                                
+                            }
+                        }
+                    }
+                );
+            }else{
+                clicked_button = ""
+                $(".topic_solution").slideUp(time,function () {
+                    $(".topic_solution").removeClass("no-before");
+                    $(".topic_container").removeClass("topic_click");
+                    $(".topic_solution").html("<p>After choosing you will be sent to our main block of web-sites where you can read about your topic and it's solution.</p>")
+                    $(".topic").css("background", "#F7FFEE")
+                    $(".topic_solution").slideDown(time);
+                });
             }
         });
-        if(((currentTopic.info.captions).length) != 0) {
-            const topicName = `<h3 class="topic_name">${currentTopic.category}</h3>`;
-            let topicDescription = '';
-            for (let i = 0; i < (currentTopic.info.captions).length; i++) {
-                topicDescription += `
-                    <div class="description_block">
-                        <h4 class="topic_caption">${(currentTopic.info.captions)[i]}</h4>
-                        <p>${(currentTopic.info.descriptions)[i]}</p>
-                    </div>`;
-            }
-            const topicContainer = document.createElement('div');
-            topicContainer.classList.add('topic_description');
-            topicContainer.innerHTML = topicName;
-            topicContainer.innerHTML += topicDescription;
-            $('.topic_solution').hide();
-            $('.topic_solution').html(topicContainer);
-            $('.topic_solution').addClass('no-before');
-            $('.topic_solution').slideToggle();
-            $('.topic_name').addClass('after');
-        } else {
-            $('.topic_solution').text(`After choosing you will be sent to our main block of web-sites where you can read about your topic and it’s solution.`);
-            $('.topic_solution').removeClass('no-before');
-        }
-        
-        // Setting the colors on topic bg color
-        $('.topic_container').css({'box-shadow': '0px 1px 11px 2px rgba(0, 0, 0, 0.25)', 'background-color': 'rgba(255, 255, 255, 0.7)'});
-        if (lastTopicColor !== undefined) {
-            $('.topic').css("background", 'linear-gradient(180deg, ' + firstTopicColor + ' 0%' + ', ' + $(this).css("background-color") + ' 200px, ' + $(this).css("background-color") + ' 70%, #F5F5EC 100%');
-            if ($('.topic').css("background") === lastTopicColor) {
-                $('.topic').css("background", firstTopicColorBackground);
-                $('.separation_bar').css('background-image', "linear-gradient(180deg, #F7FFEE 0%, #F5F4EC 100%)");
-                lastTopicColor = $('.topic').css("background");
-                
-                $('.topic_container').css({'box-shadow': '0px 1px 11px 2px rgba(0, 0, 0, 0)', 'background-color': 'rgba(255, 255, 255, 0)'});
-                $('.topic_solution').text(`After choosing you will be sent to our main block of web-sites where you can read about your topic and it’s solution.`);
-                $('.topic_solution').removeClass('no-before');
-            } else {
-                $('.topic').css("background", 'linear-gradient(180deg, ' + firstTopicColor + ' 0%' + ', ' + $(this).css("background-color") + ' 200px, ' + $(this).css("background-color") + ' 70%, #F5F5EC 100%');
-                lastTopicColor = $('.topic').css("background");
-                $('.separation_bar').css('background-image', 'linear-gradient(180deg,' + $('.topic').css("background-color") + '0%, #F5F5EC 100%)');
-            }
-        } else {
-            $('.topic').css("background", 'linear-gradient(180deg, ' + firstTopicColor + ' 0%' + ', ' + $(this).css("background-color") + ' 200px, ' + $(this).css("background-color") + ' 70%, #F5F5EC 100%');
-            lastTopicColor = $('.topic').css("background");
-            $('.separation_bar').css('background-image', 'linear-gradient(180deg,' + $('.topic').css("background-color") + '0%, #F5F5EC 100%)');
-        }
-    });
-}
+    }
+});
