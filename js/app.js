@@ -3,11 +3,18 @@ $(document).ready(() => {
     $(window).click(e => {
         const target = e.target;
         if (!target.closest('#menu-btn') && !target.closest('.menubox') && $(".menubox").css("visibility") == "visible") { 
-            document.querySelector("#menu-toggle").checked = false;
+            $("#menu-toggle").prop('checked', false);
         }
     });
     $(".menu-item").click(function () {
-        document.querySelector("#menu-toggle").checked = false;
+        $("#menu-toggle").prop('checked', false);
+    });
+    $('.menu-btn').click(function () {
+        $('.menubox').toggleClass('active');
+    });
+    $('#close_menu').click(() => {
+        $('.menubox').toggleClass('active');
+        $("#menu-toggle").prop('checked', false);
     });
     headerChange();
     burgerChange();
@@ -15,6 +22,9 @@ $(document).ready(() => {
     $(window).resize(() => {
         headerChange();
         burgerChange();
+        if ($(window).width() >= 1050 || $(window).width() < 500) {
+            $('.topic_theme').removeAttr('style');
+        }
     });
     function headerChange() {
         if ($(window).width() >= 601) {
@@ -31,9 +41,11 @@ $(document).ready(() => {
                     'margin-right': '10px'
                 });
                 $('.links').css({ 'margin-left': '50px' });
+                // $('.menubox').css({'padding-top': '125px', 'z-index': 5});
             } else {
                 $('header').removeAttr('style');
                 $('.logo').removeAttr('style');
+                // $('.menubox').css({'padding-top': '80px', 'z-index': 15});
                 if ($(".burger-menu").css('display') != 'block') {
                     $('.links').removeAttr('style');
                 }
@@ -62,9 +74,6 @@ $(document).ready(() => {
         } else {
             $(".burger-menu").css('display', 'none');
             $(".links").css('display', 'flex');
-        }
-        if ($(window).width() >= 1050 || $(window).width() < 500) {
-            $('.topic_theme').removeAttr('style');
         }
     }
     // -----------------------------------
