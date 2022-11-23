@@ -93,6 +93,13 @@
         height: 40%;
         right: 5%;
     }
+    .bta_main .advantages {
+        width: 95%;
+    }
+    .bta_main div div {
+        margin: auto 20px;
+        margin-top: 20px;
+    }
     .consultation_front .left_side form, .left_side p {
         width: 85%;
     }
@@ -276,6 +283,9 @@
     }
 }
 @media (max-width:1000px){
+    .bta_main h1{
+        width: 86%;
+    }
     .logo {
         margin-left: 33.5vw;
     }
@@ -295,6 +305,10 @@
     .logo {
         margin-left: 35.5vw;
     }
+    .bta_main .advantages {
+        width: 100%;
+    }
+
     .topic h1 {
         width: 100%;
     }
@@ -321,6 +335,12 @@
     .logo {
         margin-left: 38.5vw;
     }
+    .bta_main div div {
+        width: 60%;
+        margin: auto 30px;
+        margin-top: 20px;
+    }
+    
 }
 @media (max-width:770px) {
     .footer_right .place {
@@ -407,6 +427,12 @@
     }
 }
 @media (max-width:550px) {
+    .bta_button {
+        width: 80%;
+    }
+    .bta_button p {
+        font-size: 24px;
+    }
     .footer_right .contacts {
         display: none;
     }
@@ -522,6 +548,11 @@
     }
     .menu-btn {
         right: 20px;
+    }
+    .bta_button p {
+        font-size: 20px;
+        margin: auto 10px;
+        text-align: center;
     }
     .top_panel .search_bar input {
         width: 75%;
