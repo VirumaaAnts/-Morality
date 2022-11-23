@@ -50,11 +50,16 @@ header {
 }
 
 .logo {
+    opacity: 1;
     margin-left: 25.5vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     transition: ease all .3s;
+}
+
+.logo.active {
+    opacity: 0;
 }
 
 .logo img {
