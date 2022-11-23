@@ -106,11 +106,13 @@ header {
 /* burger menu */
 .burger-menu {
     display: none;
+    position: fixed;
+    z-index: 20;
 }
 .menu-btn {
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 30px;
     right:50px;
     width: 32px;
@@ -126,7 +128,7 @@ header {
     width: 100%;
     height: 2px;
     background-color: #3E3E3E;
-    transition-duration: .25s;
+    transition-duration: .2s;
 }
 .menu-btn > span::before {
     content: '';
@@ -146,11 +148,11 @@ header {
     width: 300px;
     height: 100vh;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 90px;
     list-style: none;
     background-color: #fff;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-    transition: ease all .6s;
+    transition: ease all .3s;
     transition-timing-function: cubic-bezier(.54,.32,.33,1)
 }
 .menubox .arrow_container {
@@ -195,6 +197,7 @@ header {
     transform: rotate(90deg);
 }
 .menubox.active {
+    padding-top: 90px;
     visibility: visible;
     right: 0;
 }
