@@ -46,10 +46,15 @@ $(document).ready(() => {
                 });
                 $('.links').css({ 'margin-left': '50px' });
                 $('.menubox').css({'padding-top': '125px', 'z-index': 5});
+                $('.logo').removeClass('active');
             } else {
                 $('header').removeAttr('style');
                 $('header').css({'z-index': 20});
                 $('.logo').removeAttr('style');
+                if($('.logo').hasClass('active')) {
+                    $('.logo').addClass('active');
+                }
+                    
                 $('.menubox').css({'padding-top': '80px', 'z-index': 15});
                 if ($(".burger-menu").css('display') != 'block') {
                     $('.links').removeAttr('style');
