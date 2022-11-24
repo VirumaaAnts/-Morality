@@ -2,48 +2,42 @@
     {
         "category": "Irritation",
         "info": {
-            "Stay in touch":"Don't give up on life. Communication can improve your mood. Connecting with friends and family means you have someone to talk to when you're feeling down.", 
-            "Be more active":"Get some exercise. There is evidence that exercise can help improve your mood. If you haven't exercised in a while, start gently by walking for 20 minutes every day.",
-            "Face your fears":"Don't avoid what seems difficult to you. When people feel down or anxious, they sometimes avoid talking to other people. Some people may lose confidence when they go out, drive, or travel.\n\nWhen this starts to happen, responding to these situations will help them feel more comfortable.",
-            "Don't drink too much alcohol":"For some people, alcohol can be a problem. You may drink more than usual to manage or hide your emotions, or just to pass the time. But alcohol won't help you solve your problems, and it can also make you depressed.",
-            "Try to eat a healthy diet":"Some people do not want to eat when depressed and are at risk of losing weight. Others find comfort in food and may lose weight.\n\nAntidepressants can also affect your appetite.\n\nIf you are concerned about weight loss, weight gain, or how antidepressants affect your appetite, talk to your healthcare provider.",
-            "Have a routine":"When people feel paralyzed, they may not sleep well, stay up late, and sleep during the day. Try to get up at regular times and stick to a routine as much as possible.\n\nLack of a routine can affect how you eat. Try to keep cooking and eating regularly.",
-            "Seeking help for depression":"Seek help if you are still feeling down or depressed after a few weeks.\n\nTreatment for depression includes psychological therapy and antidepressants.\n\nYou may be referred for psychological therapy such as cognitive behavioral therapy (CBT) or counseling. NHS. You do not need a referral from your family doctor."
-        }
-    },
-    {
-        "category": "Relations",
-        "info": {
-        }
-    },
-    {
-        "category": "Dependencies",
-        "info": {
-        }
-    },
-    {
-        "category": "Fears",
-        "info": {
-        }
-    },
-    {
-        "category": "Violence",
-        "info": {
+            "Stay in touch": "Don't give up on life. Communication can improve your mood. Connecting with friends and family means you have someone to talk to when you're feeling down.",
+            "Be more active": "Get some exercise. There is evidence that exercise can help improve your mood. If you haven't exercised in a while, start gently by walking for 20 minutes every day.",
+            "Face your fears": "Don't avoid what seems difficult to you. When people feel down or anxious, they sometimes avoid talking to other people. Some people may lose confidence when they go out, drive, or travel.\n\nWhen this starts to happen, responding to these situations will help them feel more comfortable.",
+            "Don't drink too much alcohol": "For some people, alcohol can be a problem. You may drink more than usual to manage or hide your emotions, or just to pass the time. But alcohol won't help you solve your problems, and it can also make you depressed.",
+            "Try to eat a healthy diet": "Some people do not want to eat when depressed and are at risk of losing weight. Others find comfort in food and may lose weight.\n\nAntidepressants can also affect your appetite.\n\nIf you are concerned about weight loss, weight gain, or how antidepressants affect your appetite, talk to your healthcare provider.",
+            "Have a routine": "When people feel paralyzed, they may not sleep well, stay up late, and sleep during the day. Try to get up at regular times and stick to a routine as much as possible.\n\nLack of a routine can affect how you eat. Try to keep cooking and eating regularly.",
+            "Seeking help for depression": "Seek help if you are still feeling down or depressed after a few weeks.\n\nTreatment for depression includes psychological therapy and antidepressants.\n\nYou may be referred for psychological therapy such as cognitive behavioral therapy (CBT) or counseling. NHS. You do not need a referral from your family doctor."
         }
     },
     {
         "category": "Family",
-        "info": {
-        }
+        "info": {}
     },
     {
-        "category": "Self-Rating",
+        "category": "Violence",
         "info": {
+            "Tell anyone": "If you have been a victim or witness of violence, tell someone about it. This could be anyone you trust, such as a friend, parent, teacher, coach, sibling, or neighbor.",
+            "Take any violence and abuse seriously": "Remember that many acts of violence and abuse are against the law.",
+            "To take position": "If you witness any form of violence or mistreatment stand up, stand up or yell that the perpetrator is not really cool and the violence must stop.",
+            "Be an individual": "Be a person. Think for yourself. Don't follow the crowd and don't give in to peer pressure. Don't engage in any form of violence or abuse just because your friends do.",
+            "Take back the power": "Criminals act violently or abusively to gain power. By not participating, you are taking power away from the abuser and giving it to the victim.",
+            "Remember that putting others down does not elevate you": "There is never a good reason to be insulting or violent towards someone.",
+            "Wrong 24/7": "Violence and abuse of any type that occurs at any time is wrong. period.",
+            "Be my friend": "Help the person who is being abused by inviting them to participate in school activities. This will remove the feeling of loneliness.",
+            "Spread the word": "Reassure the person who has been hurt and let them know that what happened was unfair or unfair.",
+            "Stay cool": "Try not to respond to violence with anger. Anger can make things worse.",
+
+            "If you are a victim": "There are trained counselors and services in your community who can help you deal with being a victim of violence. Talk to a trusted teacher, school counselor, or other adult who can help you get the help you need. You can also call Child Helpline free of charge at 1-800-668-6868.",
+            "If you are offensive": "If you consider yourself abusive or know you are abusive to others and want to stop it, counseling can help. You can learn to deal with people in non-violent ways. But only you can decide to stop your aggressive behavior.",
+            "Friends and colleagues:": "If you think one of your friends is being aggressive or offensive, let him know that such behavior is not good and offensive. Tell them that they are responsible for their actions and that help is available to them. If you think a friend, family member, or even someone you don't know very well is being abused, offer them your support. Encourage them to seek help and let them know they are not at fault for the abuse. The strength is in the numbers, and it's good to just know that you're not alone.",
+            "If you see it, stop!": "You may not participate in the violence itself, but don't be left out. Viewing, encouraging violence, or doing nothing makes you part of the problem. Level the playing field and take a step forward. In most cases, you will stop the violence in less than 10 seconds if you intervene! Everyone has the right to feel safe at home, at school and in the community.",
+            "Get up. Step forward. Take action against violence!": ""
         }
     },
     {
         "category": "Sleeping",
-        "info": {
-        }
+        "info": {}
     }
 ]
