@@ -650,7 +650,7 @@ header {
 .left_side p strong{
     color: #734912;
 }
-form input, form textarea {
+form input, form textarea , form select{
     width: 100%;
     height: 56px;
     padding-right: 20px;
