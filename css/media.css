@@ -493,6 +493,20 @@
     .blocks_topic div p {
         font-size: 22px;
     }
+    .assistant_chat {
+        width: 75%;
+        right: 50px;
+        bottom: 50px;
+    }
+    #assistant {
+        bottom: 20px !important
+    }
+    #assistant, #assistant img {
+        width: 55px;
+        height: 55px;
+        right: 20px;
+    }
+
 }
 @media (max-width:500px) {
     .light_green {
@@ -620,6 +634,17 @@
     .blocks_topic .top_row div:hover,
     .blocks_topic .bottom_row div:hover {
         height: calc(75px - 16px);
+    }
+    .assistant_chat {
+        width: 100%;
+        height: min-content;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 100px;
+    }
+    .assistant_chat .chat_field {
+        height: 50vh;
     }
 }
 @media (max-width:340px) {

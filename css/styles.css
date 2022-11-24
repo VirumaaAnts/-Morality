@@ -138,6 +138,11 @@ header {
     content: '';
     top: 8px;
 }
+.menu-btn.chat_active > .span_burger,
+.menu-btn.chat_active > .span_burger::before,
+.menu-btn.chat_active > .span_burger::after{
+    background-color: white;
+}
 .menubox {
     position: fixed;
     visibility: hidden;
@@ -294,7 +299,6 @@ header {
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
-    line-height: 59px;
     text-align: center;
 }
 .bta_main h1 span {
@@ -497,7 +501,7 @@ header {
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
-    margin-bottom: 45px;
+    margin-bottom: 5px;
     text-align: center;
     color: #000;
 }

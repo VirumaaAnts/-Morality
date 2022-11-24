@@ -12,6 +12,13 @@ $(document).ready(() => {
     });
     $('.menu-btn').click(function () {
         $('.menubox').toggleClass('active');
+        if($('#assistant').hasClass('active')){
+            if(!$('.menubox').hasClass('active') && $(window).width() <= 400){
+                $(".menu-btn").addClass('chat_active');
+            }else{
+                $(".menu-btn").removeClass('chat_active');
+            }
+        }
     });
     $('#close_menu').click(() => {
         $("#menu-toggle").prop('checked', false);
@@ -28,6 +35,16 @@ $(document).ready(() => {
         }
     });
     function headerChange() {
+        if($(window).width() >= 401) {
+            $(".menu-btn").removeClass('chat_active');
+        }else{
+            if($('#assistant').hasClass('active')){
+                $(".menu-btn").addClass('chat_active');
+                if($('.menubox').hasClass('active')){
+                    $(".menu-btn").removeClass('chat_active');
+                }
+            }
+        }
         if ($(window).width() >= 601) {
             $('header').removeAttr('style');
             $('.logo').removeAttr('style');
@@ -151,7 +168,10 @@ $(document).ready(() => {
         $('#assistant').css('cursor', 'pointer');
 
         $('#assistant').click(() => {
-
+            $('#assistant').toggleClass('active');
+            if($(window).width() <= 400  && !$('.menubox').hasClass('active')){
+                $(".menu-btn").toggleClass('chat_active');
+            }
             if ($('.assistant_chat').css('display') == 'none') {
                 // Open chat
                 $('.assistant_chat').show();
