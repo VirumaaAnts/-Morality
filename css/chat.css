@@ -61,7 +61,7 @@
     height: 95px;
     background-image: url('../images/chat_bg.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 .top_panel div {
     padding-top: 27px;
