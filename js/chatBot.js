@@ -36,15 +36,12 @@ function initChat() {
         userMessageElem.append(userNode);
         $('.chat_field').append(userMessageElem);
     
-        // Get answer from db
-        const answer = answers.find(ans => ans.message == message);
-        async function compareExsAnswers() {
-            
-            if(answer != null) {
-                renderBotAnswer(answer.answer, message);
-            } else {
-                renderBotAnswer(null, message);
-            }
+        // Get answer from json
+        const answer = answers.find(ans => ans.message == message.toLowerCase());
+        if(answer != null) {
+            renderBotAnswer(answer.answer, message);
+        } else {
+            renderBotAnswer(null, message);
         }
         compareExsAnswers();
     };

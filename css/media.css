@@ -45,7 +45,7 @@
         margin-left: 27vw;
     }
     .links {
-        margin-left: 18vw;
+        margin-left: 16vw;
     }
     .consultation_front .left_side form, .left_side p {
         width: 75%;
@@ -143,7 +143,7 @@
 }
 @media (max-width:1200px) {
     .logo {
-        margin-left: 31.5vw;
+        margin-left: 28vw;
         margin-right: -30px;
     }
     .light_green {
