@@ -9,6 +9,7 @@ $(document).ready(() => {
     });
     $(".menu-item").click(function () {
         $("#menu-toggle").prop('checked', false);
+        $('.menubox').toggleClass('active');
     });
     $('.menu-btn').click(function () {
         $('.menubox').toggleClass('active');
@@ -67,7 +68,7 @@ $(document).ready(() => {
 
     // Burger-Menu
     function burgerChange() {
-        if ($(window).width() <= 1050) {
+        if ($(window).width() <= 1103) {
             $(".burger-menu").css('display', 'block');
             $(".links").css('display', 'none');
         } else {
