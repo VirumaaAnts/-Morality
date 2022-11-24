@@ -470,6 +470,14 @@
     .bta_button p {
         font-size: 24px;
     }
+    .radio {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .radiobox {
+        margin-left: 20px;
+    }
     .footer_right .contacts {
         display: none;
     }
