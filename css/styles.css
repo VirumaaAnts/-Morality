@@ -661,7 +661,7 @@ form input, form textarea {
 
     font-family: 'Montserrat';
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
     resize: none;
 }
 form input:nth-child(1) {
@@ -723,7 +723,7 @@ form .send span {
     justify-content: center;
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
     color: #47240A;
 }
@@ -793,7 +793,7 @@ form .send:hover {
 
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .top_panel .search_bar input::placeholder {
@@ -890,7 +890,7 @@ form .send:hover {
 .question .question_text p {
     text-align: left;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     padding-right: 20px;
 }
 

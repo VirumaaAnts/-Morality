@@ -285,9 +285,16 @@
 @media (max-width:1000px){
     .bta_main h1{
         width: 86%;
+        font-size: 36px;
+    }
+    .bta_main h1 span {
+        font-size: 42px;
     }
     .logo {
         margin-left: 33.5vw;
+    }
+    .topic h1 {
+        font-size: 42px;
     }
     form .send span::before,
     form .send span::after {
@@ -297,6 +304,15 @@
         height: 2px;
         margin: 0 21px;
         background-color: #000;
+    }
+    .question .question_text p{
+        font-size: 20px;
+    }
+    .question .question_answer p, .question .question_answer p b{
+        font-size: 18px;
+    }
+    .footer_left p {
+        font-size: 18px;
     }
 }
 @media (max-width:950px) {
@@ -353,13 +369,16 @@
     }
 }
 @media (max-width:700px) {
-    .topic h1 {
-        width: 50%;
+    .bta_main h1{
+        width: 86%;
+        font-size: 36px;
     }
-    .topic h1::before,
-    .topic h1::after {
-        width: 40%;
-        flex: none;
+    .bta_main h1 span {
+        font-size: 42px;
+    }
+    .topic_container h1 {
+        font-size: 38px;
+        width: 90%;
     }
     .topic h1::before {
         margin-right: 15px;
@@ -402,13 +421,25 @@
     .img_div_home {
         height: 60%;
     }
+    .bta_main h1{
+        font-size: 30px;
+        margin-bottom: 0;
+        margin-top: 80px;
+    }
+    .bta_main h1 span {
+        font-size: 36px;
+    }
     .topic_container h1 {
-        font-size: 38px;
+        font-size: 34px;
+        margin-bottom: 0;
     }
     .consultation_front h2 {
         width: 90%;
         text-align: center;
-        font-size: 38px;
+        font-size: 34px;
+    }
+    .consultation_front h2:before {
+        margin-top: 0;
     }
     .h2_black_line_up{
         width: 320px;
@@ -424,6 +455,12 @@
     .faq .top_panel {
         height: max-content;
         padding-bottom: 26px;
+    }
+    .faq .top_panel h2 {
+        font-size: 30px;
+    }
+    .top_panel .search_bar input {
+        height: 45px;
     }
 }
 @media (max-width:550px) {
@@ -556,7 +593,6 @@
     }
     .top_panel .search_bar input {
         width: 75%;
-        height: 60px;
         padding-left: 28px;
     }
     .topic h1 {
