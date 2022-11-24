@@ -192,5 +192,31 @@ $(document).ready(() => {
             }
         });
     }, 2000);
+    // Game appearance
+    $('#game').css({ 'display': 'flex', 'animation': 'game_animation infinite 3s' });
+    setTimeout(() => {
+        $('#game').animate({ 'opacity': 1, 'right': '-30px'}, 700);
+        $('#game').css('cursor', 'pointer');
+
+        $('#game').click(() => {
+            // Open chat
+            if ($('.user_ban').css('display') == 'none') {
+                $('.game_window').animate({'right': '50%'});
+                $('.user_ban').show();
+
+                setTimeout(() => {
+                    $('#game').animate({ 'right': '50vh', 'opacity': 0 }, 400);
+                }, 150);
+                $('#game').children().animate({ 'transform': 'rotate(180deg)' }, 900);
+            } else {
+                // Close chat
+                $('.game_chat').fadeOut();
+                setTimeout(() => {
+                    $('.game_chat').css('opacity', 0);
+                }, 400);
+                $('#game').css('animation', 'game_animation infinite 3s');
+            }
+        });
+    }, 2000);
     // -----------------------------------
 });
