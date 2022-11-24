@@ -259,7 +259,8 @@ header {
     background-image: url("../images/main_page.png");
     background-position: center;
     width: 800px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 50%;
     right: 10%;
     margin-bottom: 30px;
