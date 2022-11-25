@@ -56,12 +56,37 @@ ul {
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.492);
     background-color: rgba(255, 255, 255, 0.699);
     z-index: 25;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     position: fixed;
     right: -60%;
     top: 50%;
     transform: translate(50%, -50%);
     transition: ease all .4s;
     transition-timing-function: cubic-bezier(.43,.18,.17,1.02)
+}
+.game_window a {
+    width: 48%;
+    height: 90%;
+    text-align: center;
+    background-color: #ccc;
+    border: 1px solid;
+    overflow: hidden;
+}
+.game_window a:hover > img {
+    transform: scale(1.02);
+    filter: brightness(70%) blur(1.5px);
+}
+.game_window a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    transition: ease all .4s;
+}
+.game_window a:nth-child(2) {
+    filter: brightness(70%) blur(0.5px);
 }
 
 #game {

@@ -7,6 +7,16 @@ $(document).ready(() => {
             $('.menubox').toggleClass('active');
         }
     });
+    $('.user_ban').click(() => {
+        if($('.game_window').hasClass('active')) {
+            $('.game_window').removeClass('active');
+            $('.game_window').animate({'right': '-60%'}, 400);
+            setTimeout(() => {
+                $('#game').animate({'right': '-35px', 'opacity': 1}, 400);
+            }, 2000);
+            $('.user_ban').hide();
+        }
+    });
     $(".menu-item").click(function () {
         $("#menu-toggle").prop('checked', false);
         $('.menubox').toggleClass('active');
@@ -203,10 +213,12 @@ $(document).ready(() => {
             if ($('.user_ban').css('display') == 'none') {
                 $("body").css("overflow", "hidden");
                 $('.game_window').animate({'right': '50%'});
+                $('.game_window').addClass('active');
                 $('.user_ban').show();
 
                 setTimeout(() => {
                     $('#game').animate({ 'right': '50vh', 'opacity': 0 }, 400);
+                    $('#game').removeAttr('style');
                 }, 150);
                 $('#game').children().animate({ 'transform': 'rotate(180deg)' }, 900);
             } else {
