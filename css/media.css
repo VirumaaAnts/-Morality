@@ -459,10 +459,12 @@
     .faq .top_panel h2 {
         font-size: 30px;
     }
-    .top_panel .search_bar input {
-        height: 45px;
+    .top_panel .search_bar {
+        height: 80px;
     }
-}
+    #btn_search {
+        width: 60px;
+    }   
 @media (max-width:550px) {
     .bta_button {
         width: 80%;
