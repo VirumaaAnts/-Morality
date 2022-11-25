@@ -16,16 +16,16 @@ $(document).ready(function () {
                                 description.className = "topic_description"
                                 let head = document.createElement("h2")
                                 head.className = "topic_name after"
-                                head.textContent= button_text
+                                head.innerHTML= button_text
                                 description.appendChild(head)
                                 for (let q in j.info){
                                     let block = document.createElement("div")
                                     block.className = "description_block"
                                     let header = document.createElement("h4")
                                     header.className = "topic_caption"
-                                    header.textContent = q
+                                    header.innerHTML = q
                                     let text = document.createElement("p")
-                                    text.textContent = j.info[q]
+                                    text.innerHTML = j.info[q]
                                     block.appendChild(header)
                                     block.appendChild(text)
                                     description.appendChild(block)

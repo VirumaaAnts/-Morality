@@ -131,6 +131,9 @@ $(document).ready(() => {
     // -----------------------------------
 
     // Search FAQ
+    $('#btn_search').click(function (e) {
+        searchFaq();
+    })
     $('#searchFaq').keypress(function (e) { 
         if(e.key == 'Enter') {
             searchFaq();

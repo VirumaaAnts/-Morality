@@ -574,7 +574,7 @@ header {
     margin-top: 7px;
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     margin-bottom: 5px;
     text-align: center;
@@ -599,7 +599,7 @@ header {
 
 .topic_solution .topic_description p {
     font-family: 'Montserrat';
-    font-weight: 600;
+
     font-size: 22px;
     text-align: left;
     padding-left: 20px;
@@ -628,7 +628,7 @@ header {
     font-size: 32px;
     text-align: left;
 }
-
+.topic_solution strong {font-size: 28px}
 .separation_bar {
     width: 100%;
     height: 130px;
@@ -743,6 +743,7 @@ form input, form textarea , form select{
     font-size: 20px;
     resize: none;
 }
+
 form input:nth-child(1) {
     margin-top: 0;
 }
@@ -853,16 +854,42 @@ form .send:hover {
 
 .top_panel .search_bar {
     width: 100%;
+    height: 90px;
     margin: 0;
     padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
+}
+#btn_search {
+    width: 81px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: unset;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    background-color: white;
+    border-left: 1px solid black;
+}
+#btn_search img {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+}
+#btn_search:hover {
+    background-color: #e2d5a8;
+}
 .top_panel .search_bar input {
     width: 65%;
-    height: 60px;
+    height: 100%;
     padding-left: 28px;
 
     background-color: #FFFFFF;
@@ -873,6 +900,8 @@ form .send:hover {
     font-family: 'Manrope', sans-serif;
     font-weight: 500;
     font-size: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .top_panel .search_bar input::placeholder {
