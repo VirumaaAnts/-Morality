@@ -204,6 +204,7 @@ $(document).ready(() => {
         $('#game').click(() => {
             // Open chat
             if ($('.user_ban').css('display') == 'none') {
+                $("body").css("overflow", "hidden");
                 $('.game_window').animate({'right': '50%'});
                 $('.user_ban').show();
 
@@ -212,6 +213,7 @@ $(document).ready(() => {
                 }, 150);
                 $('#game').children().animate({ 'transform': 'rotate(180deg)' }, 900);
             } else {
+                $("body").css("overflow", "auto");
                 // Close chat
                 $('.game_chat').fadeOut();
                 setTimeout(() => {
